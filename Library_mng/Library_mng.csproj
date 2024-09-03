@@ -1,0 +1,298 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49DB76A7-6A7A-4530-925E-EFCC75B94D47}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library_mng</RootNamespace>
+    <AssemblyName>Library_mng</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44339</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bootstrap\aos.js" />
+    <Content Include="bootstrap\bootstrap-datepicker.js" />
+    <Content Include="bootstrap\bootstrap.min.js" />
+    <Content Include="bootstrap\google-map.js" />
+    <Content Include="bootstrap\jquery-3.2.1.min.js" />
+    <Content Include="bootstrap\jquery-migrate-3.0.1.min.js" />
+    <Content Include="bootstrap\jquery.animateNumber.min.js" />
+    <Content Include="bootstrap\jquery.easing.1.3.js" />
+    <Content Include="bootstrap\jquery.magnific-popup.min.js" />
+    <Content Include="bootstrap\jquery.min.js" />
+    <Content Include="bootstrap\jquery.stellar.min.js" />
+    <Content Include="bootstrap\jquery.timepicker.min.js" />
+    <Content Include="bootstrap\jquery.waypoints.min.js" />
+    <Content Include="bootstrap\main.js" />
+    <Content Include="bootstrap\owl.carousel.min.js" />
+    <Content Include="css\adminlogin.css" />
+    <Content Include="css\gallery.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\ourteam.css" />
+    <Content Include="css\service_process.css" />
+    <Content Include="images\24hour.png" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\ambulance.png" />
+    <Content Include="images\bg_1.jpg" />
+    <Content Include="images\bg_2.jpg" />
+    <Content Include="images\bg_3.jpg" />
+    <Content Include="images\bg_4.jpg" />
+    <Content Include="images\bg_5.jpg" />
+    <Content Include="images\bg_6.jpg" />
+    <Content Include="images\bg_7.jpg" />
+    <Content Include="images\bg_8.jpg" />
+    <Content Include="images\bg_9.jpg" />
+    <Content Include="images\dco-experiment.png" />
+    <Content Include="images\deco-ambulance.png" />
+    <Content Include="images\deco-doctor.png" />
+    <Content Include="images\deco-dropper.jpg" />
+    <Content Include="images\deco-firstaid.png" />
+    <Content Include="images\deco-stethosci=ope.png" />
+    <Content Include="images\dept-1.jpg" />
+    <Content Include="images\dept-2.jpg" />
+    <Content Include="images\dept-3.jpg" />
+    <Content Include="images\dept-4.jpg" />
+    <Content Include="images\dept-5.jpg" />
+    <Content Include="images\doc-1.jpg" />
+    <Content Include="images\doc-2.jpg" />
+    <Content Include="images\doc-3.jpg" />
+    <Content Include="images\doc-4.jpg" />
+    <Content Include="images\doc-5.jpg" />
+    <Content Include="images\doc-6.jpg" />
+    <Content Include="images\doc-7.jpg" />
+    <Content Include="images\doc-8.jpg" />
+    <Content Include="images\firstaidkit.jpg" />
+    <Content Include="images\image_1.jpg" />
+    <Content Include="images\image_2.jpg" />
+    <Content Include="images\image_3.jpg" />
+    <Content Include="images\image_4.jpg" />
+    <Content Include="images\image_5.jpg" />
+    <Content Include="images\image_6.jpg" />
+    <Content Include="images\loc.png" />
+    <Content Include="images\login-admin.png" />
+    <Content Include="images\login-hospital.png" />
+    <Content Include="images\login-patient.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\person_1.jpg" />
+    <Content Include="images\person_2.jpg" />
+    <Content Include="images\person_3.jpg" />
+    <Content Include="images\person_4.jpg" />
+    <Content Include="images\person_5.jpg" />
+    <Content Include="images\person_6.jpg" />
+    <Content Include="images\q1.png" />
+    <Content Include="images\q2.jpg" />
+    <Content Include="images\q3.jpg" />
+    <Content Include="images\q4.jpg" />
+    <Content Include="images\q5.jpg" />
+    <Content Include="images\q5.png" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s4.jpg" />
+    <Content Include="images\s5.jpg" />
+    <Content Include="images\s6.jpg" />
+    <Content Include="images\s7.jpg" />
+    <Content Include="images\staff-1.jpg" />
+    <Content Include="images\staff-2.jpg" />
+    <Content Include="images\staff-3.jpg" />
+    <Content Include="images\staff-4.jpg" />
+    <Content Include="images\stethoscope.jpg" />
+    <Content Include="bootstrap\popper.min.js" />
+    <Content Include="bootstrap\range.js" />
+    <Content Include="bootstrap\scrollax.min.js" />
+    <Content Include="page\adminlogin.aspx" />
+    <Content Include="page\default.aspx" />
+    <Content Include="css\default.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\DBconfig.cs" />
+    <Compile Include="page\adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\gallery.aspx.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\gallery.aspx.designer.cs">
+      <DependentUpon>gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\Hospitallogin.aspx.cs">
+      <DependentUpon>Hospitallogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\Hospitallogin.aspx.designer.cs">
+      <DependentUpon>Hospitallogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\login1.aspx.cs">
+      <DependentUpon>login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\login1.aspx.designer.cs">
+      <DependentUpon>login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\masterpage.Master.cs">
+      <DependentUpon>masterpage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\masterpage.Master.designer.cs">
+      <DependentUpon>masterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="page\Ourteam.aspx.cs">
+      <DependentUpon>Ourteam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\Ourteam.aspx.designer.cs">
+      <DependentUpon>Ourteam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\patientlogin.aspx.cs">
+      <DependentUpon>patientlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patientlogin.aspx.designer.cs">
+      <DependentUpon>patientlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\Registrationpage.aspx.cs">
+      <DependentUpon>Registrationpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\Registrationpage.aspx.designer.cs">
+      <DependentUpon>Registrationpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\service_process.aspx.cs">
+      <DependentUpon>service_process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\service_process.aspx.designer.cs">
+      <DependentUpon>service_process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\.DS_Store" />
+    <Content Include="page\gallery.aspx" />
+    <Content Include="page\Hospitallogin.aspx" />
+    <Content Include="page\login1.aspx" />
+    <Content Include="page\masterpage.Master" />
+    <None Include="page\packages.config" />
+    <Content Include="page\Ourteam.aspx" />
+    <Content Include="page\patientlogin.aspx" />
+    <Content Include="page\Registrationpage.aspx" />
+    <Content Include="page\service_process.aspx" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="masterpage\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61004</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44339/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

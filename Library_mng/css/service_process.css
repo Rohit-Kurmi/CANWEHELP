@@ -1,0 +1,24 @@
+﻿body {
+}
+
+.bdrcol {
+    border: 2px solid blue;
+  
+}
+
+.bdrcol:hover {
+    border: 2px solid orangered;
+}
+
+
+.txtt{
+    color:blue;
+}
+.txtt:hover{
+    color:orangered;
+}
+
+.btn:hover {
+    background-color: orangered;
+    border: 1px solid orangered;
+}
