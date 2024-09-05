@@ -87,6 +87,7 @@
     <Content Include="css\login.css" />
     <Content Include="css\ourteam.css" />
     <Content Include="css\service_process.css" />
+    <Content Include="Hospitalregistration.aspx" />
     <Content Include="images\24hour.png" />
     <Content Include="images\about.jpg" />
     <Content Include="images\ambulance.png" />
@@ -163,6 +164,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCode\DBconfig.cs" />
+    <Compile Include="Hospitalregistration.aspx.cs">
+      <DependentUpon>Hospitalregistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hospitalregistration.aspx.designer.cs">
+      <DependentUpon>Hospitalregistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\adminlogin.aspx.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

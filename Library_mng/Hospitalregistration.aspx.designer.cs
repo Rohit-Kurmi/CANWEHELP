@@ -11,53 +11,35 @@ namespace Library_mng
 {
 
 
-    public partial class patientregistration
+    public partial class Hospitalregistration
     {
 
         /// <summary>
-        /// Txtfn control.
+        /// hospitaltregistration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtfn;
+        protected global::System.Web.UI.HtmlControls.HtmlForm hospitaltregistration;
 
         /// <summary>
-        /// TextBox1 control.
+        /// Txtname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Txtname;
 
         /// <summary>
-        /// rbtnMale control.
+        /// txtregistrationno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnMale;
-
-        /// <summary>
-        /// rbtnFemale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnFemale;
-
-        /// <summary>
-        /// txtdob control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdob;
+        protected global::System.Web.UI.WebControls.TextBox txtregistrationno;
 
         /// <summary>
         /// txtgmail control.
@@ -69,6 +51,96 @@ namespace Library_mng
         protected global::System.Web.UI.WebControls.TextBox txtgmail;
 
         /// <summary>
+        /// txtweb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtweb;
+
+        /// <summary>
+        /// RBdocyes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBdocyes;
+
+        /// <summary>
+        /// RBdocno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBdocno;
+
+        /// <summary>
+        /// RBnurseyes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBnurseyes;
+
+        /// <summary>
+        /// RBnurseno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBnurseno;
+
+        /// <summary>
+        /// RBeneryes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBeneryes;
+
+        /// <summary>
+        /// RBemerno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBemerno;
+
+        /// <summary>
+        /// RBDisyes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBDisyes;
+
+        /// <summary>
+        /// RBDisno control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RBDisno;
+
+        /// <summary>
+        /// txtworkinghours control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtworkinghours;
+
+        /// <summary>
         /// txtmobileno control.
         /// </summary>
         /// <remarks>
@@ -78,13 +150,13 @@ namespace Library_mng
         protected global::System.Web.UI.WebControls.TextBox txtmobileno;
 
         /// <summary>
-        /// DDbg control.
+        /// txttelephone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DDbg;
+        protected global::System.Web.UI.WebControls.TextBox txttelephone;
 
         /// <summary>
         /// txtaddress control.
@@ -94,15 +166,6 @@ namespace Library_mng
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtaddress;
-
-        /// <summary>
-        /// lblerroraddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblerroraddress;
 
         /// <summary>
         /// ddstate control.

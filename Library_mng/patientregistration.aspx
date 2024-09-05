@@ -14,11 +14,11 @@
 
     <div class="container mb-5">
         <div class="box " style="margin-top: 40px; margin-bottom: 20px; box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.7); padding: 30px">
-            <form id="registrationpage" runat="server">
+            <form id="patientregistration" runat="server">
 
                 <!-- note -->
                 <div class="row  border border-muted">
-                    <div class="col-sm-12 tool-box note" style="background-color: #ffffb3; color: #ff0000; font-weight: bold; letter-spacing: 0px;">
+                    <div class="col-sm-12 " style="background-color: #ffffb3; color: #ff0000; font-weight: bold; letter-spacing: 0px;">
                         Note :- All fields marked with *  are mandatory to be fill. 
                     </div>
                 </div>
