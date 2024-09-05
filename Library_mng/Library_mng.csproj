@@ -233,6 +233,13 @@
     <Compile Include="page\service_process.aspx.designer.cs">
       <DependentUpon>service_process.aspx</DependentUpon>
     </Compile>
+    <Compile Include="patientregistration.aspx.cs">
+      <DependentUpon>patientregistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="patientregistration.aspx.designer.cs">
+      <DependentUpon>patientregistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +253,7 @@
     <Content Include="page\patientlogin.aspx" />
     <Content Include="page\Registrationpage.aspx" />
     <Content Include="page\service_process.aspx" />
+    <Content Include="patientregistration.aspx" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

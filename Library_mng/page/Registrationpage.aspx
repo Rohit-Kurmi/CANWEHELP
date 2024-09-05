@@ -7,36 +7,40 @@
      <div class="container">
          <div class="row">
              <div class="col-12 text-center">
-                 <h1 class="mb-2 bread">Registration</h1>
+                 <h1 class="mb-2 text-primary">Registration</h1>
                  <p><a href="#">Home  </a><span>Registration </span></p>
              </div>
          </div>
      </div>
 
-  
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 py-5">
-
-                    <div class="form-group">
-                        <asp:Button ID="HosRegBtn" runat="server" Text="Registration" CssClass="btn btn-primary"></asp:Button>
-                    </div>
 
 
+
+        <div class="row pb-5 pt-5 g">
+            <div class="col-md-6 col-lg-6   text-center">
+
+                <div>
+                    <span>HOSPITAL REGISTRATION</span><br />
                 </div>
-
-                <div class="col-md-6 col-lg-6">
-
-                    <div class="form-group">
-                        <asp:Button ID="PatRegBtn" runat="server" Text="Registration" CssClass="btn btn-primary"></asp:Button>
-                    </div>
+                <p class="btn btn-primary text-muted"><a href="#"> Registration</a></p>
 
 
+
+            </div>
+
+            <div class="col-md-6 col-lg-6  text-center">
+                <div>
+                    <span>PATIENT REGISTRATION</span><br />
                 </div>
+            <p class="btn btn-primary text-muted"><a href="#">  Registration </a></p>
+
+
+
+
             </div>
         </div>
-        
+
+
 
 
 

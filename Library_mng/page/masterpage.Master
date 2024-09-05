@@ -150,12 +150,12 @@
                     <h4>Subscribe Us!</h4>
                     <br />
 
-                    <form runat="server">
+
                         <div class="form-group">
-                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter email address" CssClass="form-control mb-3 text-center"></asp:TextBox>
+                            <input type="email" class="form-control mb-2" id="email" placeholder="Enter email address" name="email">
                         </div>
-                        <asp:Button ID="Button1" runat="server" Text="Subscribe" class="form-control submit bg-primary text-white px-3 " />
-                    </form>
+                        <Button ID="Button1" class="form-control submit bg-primary text-white px-3 " >Subscribe</button>
+                   
 
 
                     <br />

@@ -466,7 +466,7 @@
                     <br />
 
                     <form runat="server">
-                        <div class="form-group">
+                        <div class="form-group" id="footerform">
                             <asp:TextBox ID="TextBox1" runat="server" placeholder="Enter email address" CssClass="form-control mb-3 text-center"></asp:TextBox>
                         </div>
                         <asp:Button ID="Button1" runat="server" Text="Subscribe" class="form-control submit bg-primary text-white px-3 " />
