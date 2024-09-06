@@ -187,14 +187,14 @@
 
                     <div class="col-md-3 pb-4 py-4  border border-muted">
                         <div class="form-group">
-                            <asp:Button ID="btnreset" runat="server" Text="Reset" class="form-control submit bg-warning text-white px-3 px-4" />
+                            <asp:Button ID="btnreset" runat="server" Text="Reset" class="form-control submit bg-warning text-white px-3 px-4 rounded-pill" />
                         </div>
                     </div>
 
 
                     <div class="col-md-3 pb-4 py-4  border border-muted">
                         <div class="form-group ">
-                            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-warning text-white px-3 px-4" />
+                            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-warning text-white px-3 px-4 rounded-pill" />
 
                         </div>
                     </div>

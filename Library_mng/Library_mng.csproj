@@ -87,7 +87,7 @@
     <Content Include="css\login.css" />
     <Content Include="css\ourteam.css" />
     <Content Include="css\service_process.css" />
-    <Content Include="Hospitalregistration.aspx" />
+    <Content Include="page\Hospitalregistration.aspx" />
     <Content Include="images\24hour.png" />
     <Content Include="images\about.jpg" />
     <Content Include="images\ambulance.png" />
@@ -164,11 +164,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCode\DBconfig.cs" />
-    <Compile Include="Hospitalregistration.aspx.cs">
+    <Compile Include="page\Hospitalregistration.aspx.cs">
       <DependentUpon>Hospitalregistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Hospitalregistration.aspx.designer.cs">
+    <Compile Include="page\Hospitalregistration.aspx.designer.cs">
       <DependentUpon>Hospitalregistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\adminlogin.aspx.cs">
@@ -241,12 +241,18 @@
     <Compile Include="page\service_process.aspx.designer.cs">
       <DependentUpon>service_process.aspx</DependentUpon>
     </Compile>
-    <Compile Include="patientregistration.aspx.cs">
+    <Compile Include="page\patientregistration.aspx.cs">
       <DependentUpon>patientregistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="patientregistration.aspx.designer.cs">
+    <Compile Include="page\patientregistration.aspx.designer.cs">
       <DependentUpon>patientregistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\patient_home.Master.cs">
+      <DependentUpon>patient_home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="page\patient_home.Master.designer.cs">
+      <DependentUpon>patient_home.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -261,8 +267,9 @@
     <Content Include="page\patientlogin.aspx" />
     <Content Include="page\Registrationpage.aspx" />
     <Content Include="page\service_process.aspx" />
-    <Content Include="patientregistration.aspx" />
+    <Content Include="page\patientregistration.aspx" />
     <Content Include="web.config" />
+    <Content Include="page\patient_home.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
