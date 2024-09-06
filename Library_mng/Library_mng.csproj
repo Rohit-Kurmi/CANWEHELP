@@ -87,6 +87,7 @@
     <Content Include="css\login.css" />
     <Content Include="css\ourteam.css" />
     <Content Include="css\service_process.css" />
+    <Content Include="for help of master page.aspx" />
     <Content Include="page\Hospitalregistration.aspx" />
     <Content Include="images\24hour.png" />
     <Content Include="images\about.jpg" />
@@ -164,6 +165,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppCode\DBconfig.cs" />
+    <Compile Include="for help of master page.aspx.cs">
+      <DependentUpon>for help of master page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="for help of master page.aspx.designer.cs">
+      <DependentUpon>for help of master page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\Hospitalregistration.aspx.cs">
       <DependentUpon>Hospitalregistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,6 +235,13 @@
     <Compile Include="page\patientlogin.aspx.designer.cs">
       <DependentUpon>patientlogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="page\patienttransport.aspx.cs">
+      <DependentUpon>patienttransport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patienttransport.aspx.designer.cs">
+      <DependentUpon>patienttransport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\Registrationpage.aspx.cs">
       <DependentUpon>Registrationpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,6 +280,7 @@
     <None Include="page\packages.config" />
     <Content Include="page\Ourteam.aspx" />
     <Content Include="page\patientlogin.aspx" />
+    <Content Include="page\patienttransport.aspx" />
     <Content Include="page\Registrationpage.aspx" />
     <Content Include="page\service_process.aspx" />
     <Content Include="page\patientregistration.aspx" />
