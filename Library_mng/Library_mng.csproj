@@ -228,12 +228,12 @@
     <Compile Include="page\Ourteam.aspx.designer.cs">
       <DependentUpon>Ourteam.aspx</DependentUpon>
     </Compile>
-    <Compile Include="page\patient feedback.aspx.cs">
-      <DependentUpon>patient feedback.aspx</DependentUpon>
+    <Compile Include="page\patientfeedback.aspx.cs">
+      <DependentUpon>patientfeedback.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="page\patient feedback.aspx.designer.cs">
-      <DependentUpon>patient feedback.aspx</DependentUpon>
+    <Compile Include="page\patientfeedback.aspx.designer.cs">
+      <DependentUpon>patientfeedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\patientcheckup.aspx.cs">
       <DependentUpon>patientcheckup.aspx</DependentUpon>
@@ -307,7 +307,7 @@
     <Content Include="page\masterpage.Master" />
     <None Include="page\packages.config" />
     <Content Include="page\Ourteam.aspx" />
-    <Content Include="page\patient feedback.aspx" />
+    <Content Include="page\patientfeedback.aspx" />
     <Content Include="page\patientcheckup.aspx" />
     <Content Include="page\patienthomecare.aspx" />
     <Content Include="page\patientlogin.aspx" />
