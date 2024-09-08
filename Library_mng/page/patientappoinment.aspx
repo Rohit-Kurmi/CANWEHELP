@@ -16,7 +16,7 @@
 
                 <!-- note -->
                 <div class="row ">
-                    <div class="col-sm-12 tool-box note" style="background-color: #ffffb3; color: #ff0000; font-weight: bold; letter-spacing: 0px;">
+                    <div class="col-sm-12 " style="background-color: #ffffb3; color: #ff0000; font-weight: bold; letter-spacing: 0px;">
                         Note :- All fields marked with *  are mandatory to be fill. 
                     </div>
                 </div>

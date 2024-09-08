@@ -228,6 +228,20 @@
     <Compile Include="page\Ourteam.aspx.designer.cs">
       <DependentUpon>Ourteam.aspx</DependentUpon>
     </Compile>
+    <Compile Include="page\patient feedback.aspx.cs">
+      <DependentUpon>patient feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patient feedback.aspx.designer.cs">
+      <DependentUpon>patient feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\patientcheckup.aspx.cs">
+      <DependentUpon>patientcheckup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patientcheckup.aspx.designer.cs">
+      <DependentUpon>patientcheckup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\patienthomecare.aspx.cs">
       <DependentUpon>patienthomecare.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -293,6 +307,8 @@
     <Content Include="page\masterpage.Master" />
     <None Include="page\packages.config" />
     <Content Include="page\Ourteam.aspx" />
+    <Content Include="page\patient feedback.aspx" />
+    <Content Include="page\patientcheckup.aspx" />
     <Content Include="page\patienthomecare.aspx" />
     <Content Include="page\patientlogin.aspx" />
     <Content Include="page\patienttransport.aspx" />
