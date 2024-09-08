@@ -228,6 +228,13 @@
     <Compile Include="page\Ourteam.aspx.designer.cs">
       <DependentUpon>Ourteam.aspx</DependentUpon>
     </Compile>
+    <Compile Include="page\patienthomecare.aspx.cs">
+      <DependentUpon>patienthomecare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patienthomecare.aspx.designer.cs">
+      <DependentUpon>patienthomecare.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\patientlogin.aspx.cs">
       <DependentUpon>patientlogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,6 +276,13 @@
     <Compile Include="page\patient_home.Master.designer.cs">
       <DependentUpon>patient_home.Master</DependentUpon>
     </Compile>
+    <Compile Include="page\patientappoinment.aspx.cs">
+      <DependentUpon>patientappoinment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patientappoinment.aspx.designer.cs">
+      <DependentUpon>patientappoinment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -279,11 +293,13 @@
     <Content Include="page\masterpage.Master" />
     <None Include="page\packages.config" />
     <Content Include="page\Ourteam.aspx" />
+    <Content Include="page\patienthomecare.aspx" />
     <Content Include="page\patientlogin.aspx" />
     <Content Include="page\patienttransport.aspx" />
     <Content Include="page\Registrationpage.aspx" />
     <Content Include="page\service_process.aspx" />
     <Content Include="page\patientregistration.aspx" />
+    <Content Include="page\patientappoinment.aspx" />
     <Content Include="web.config" />
     <Content Include="page\patient_home.Master" />
     <None Include="web.Debug.config">
