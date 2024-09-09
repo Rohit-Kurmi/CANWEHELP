@@ -34,18 +34,18 @@
             <span style="color:white">Menu</span>
         </button>
 
-        <a href="../enquiry.aspx" class="btn btn-warning py-2 px-3 button-custom order-lg-last ml-3">Enquiry</a>
-        <a href="../login1.aspx" class="btn btn-warning py-2 px-3  button-custom order-lg-last mr-3  ">Login</a>
+        <a href="#" class="btn btn-warning py-2 px-3 button-custom order-lg-last ml-3">Enquiry</a>
+        <a href="login1.aspx" class="btn btn-warning py-2 px-3  button-custom order-lg-last mr-3  ">Login</a>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item"><a href="../default.aspx" class="nav-link pl-0" style="color: white">Home</a></li>
-                <li class="nav-item"><a href="../gallery.aspx" class="nav-link" style="color: white">Service Process</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: white">OurTeam</a></li>
+                <li class="nav-item"><a href="default.aspx" class="nav-link pl-0" style="color: white">Home</a></li>
+                <li class="nav-item"><a href="service_process.aspx" class="nav-link" style="color: white">Service Process</a></li>
+                <li class="nav-item"><a href="Ourteam.aspx" class="nav-link" style="color: white">OurTeam</a></li>
                 <li class="nav-item"><a href="#" class="nav-link" style="color: white">Speciality</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: white">Gallery</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: white">Registration</a></li>
+                <li class="nav-item"><a href="gallery.aspx" class="nav-link" style="color: white">Gallery</a></li>
+                <li class="nav-item"><a href="Registrationpage.aspx" class="nav-link" style="color: white">Registration</a></li>
             </ul>
         </div>
     </div>

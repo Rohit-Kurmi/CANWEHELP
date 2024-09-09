@@ -73,7 +73,7 @@
 
                         <div class="row mt-2" style="text-align: center;">
                             <div class="col-sm-12">
-                                <a href="#"><-Home Page</a>
+                                <a href="default.aspx"><-Home Page</a>
                             </div>
                         </div>
 

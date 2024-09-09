@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Library_mng
+namespace Library_mng.page
 {
 
 
-    public partial class test
+    public partial class _default
     {
 
         /// <summary>

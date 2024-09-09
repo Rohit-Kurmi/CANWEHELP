@@ -130,25 +130,25 @@
         <div class="sidebar-content">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" href="#">Home</a>
+                    <a class="nav-link active text-white" href="patienthome.aspx">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Take Appointment</a>
+                    <a class="nav-link text-white" href="patientappoinment.aspx">Take Appointment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Transport And Care</a>
+                    <a class="nav-link text-white" href="patienttransport.aspx">Transport And Care</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Home Care Request</a>
+                    <a class="nav-link text-white" href="patienthomecare.aspx">Home Care Request</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Health Checkup Request</a>
+                    <a class="nav-link text-white" href="patientcheckup.aspx">Health Checkup Request</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Send Feedback</a>
+                    <a class="nav-link text-white" href="patientfeedback.aspx">Send Feedback</a>
                 </li>
             </ul>
         </div>

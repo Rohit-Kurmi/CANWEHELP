@@ -22,8 +22,7 @@
                 <div>
                     <span>HOSPITAL REGISTRATION</span><br />
                 </div>
-                <p class="btn btn-primary text-muted"><a href="#"> Registration</a></p>
-
+                <p class="btn btn-primary text-muted"><a href="Hospitalregistration.aspx"> Registration</a></p>
 
 
             </div>
@@ -32,8 +31,7 @@
                 <div>
                     <span>PATIENT REGISTRATION</span><br />
                 </div>
-            <p class="btn btn-primary text-muted"><a href="#">  Registration </a></p>
-
+            <p class="btn btn-primary text-muted"><a href="patientregistration.aspx">  Registration </a></p>
 
 
 

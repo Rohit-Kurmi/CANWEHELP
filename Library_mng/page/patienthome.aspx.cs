@@ -7,9 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Library_mng.page
 {
-
-
-    public partial class _default : System.Web.UI.Page
+    public partial class patienthome : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

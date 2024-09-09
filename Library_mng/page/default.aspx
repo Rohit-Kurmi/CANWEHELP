@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="_default.aspx.cs" Inherits="Library_mng.test" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="_default.aspx.cs" Inherits="Library_mng.page._default" %>
 
 
 <!DOCTYPE html>
@@ -36,21 +36,20 @@
             </button>
 
             <a href="enquiry.aspx" class="btn btn-warning py-2 px-3 button-custom order-lg-last ml-3">Enquiry</a>
-            <a href="login.aspx" class="btn btn-warning py-2 px-3  button-custom order-lg-last mr-3  ">Login</a>
+            <a href="login1.aspx" class="btn btn-warning py-2 px-3  button-custom order-lg-last mr-3  ">Login</a>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a href="#" class="nav-link pl-0" style="color: white">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color: white">Service Process</a></li>
+                    <li class="nav-item"><a href="default.aspx" class="nav-link pl-0" style="color: white">Home</a></li>
+                    <li class="nav-item"><a href="service_process.aspx" class="nav-link" style="color: white">Service Process</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" style="color: white">OurTeam</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color: white">Speciality</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color: white">Gallery</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color: white">Registration</a></li>
+                    <li class="nav-item"><a href="Ourteam.aspx" class="nav-link" style="color: white">Speciality</a></li>
+                    <li class="nav-item"><a href="gallery.aspx" class="nav-link" style="color: white">Gallery</a></li>
+                    <li class="nav-item"><a href="Registrationpage.aspx" class="nav-link" style="color: white">Registration</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
 
     <!------------below to navbar------------>
 
@@ -87,7 +86,7 @@
 
 
 
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="2000">
 
                       <div class="carousel-inner">
                         <div class="carousel-item active">
