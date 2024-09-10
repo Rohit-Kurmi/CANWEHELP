@@ -305,6 +305,13 @@
     <Compile Include="page\patientappoinment.aspx.designer.cs">
       <DependentUpon>patientappoinment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="practice.aspx.cs">
+      <DependentUpon>practice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practice.aspx.designer.cs">
+      <DependentUpon>practice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +332,7 @@
     <Content Include="page\service_process.aspx" />
     <Content Include="page\patientregistration.aspx" />
     <Content Include="page\patientappoinment.aspx" />
+    <Content Include="practice.aspx" />
     <Content Include="web.config" />
     <Content Include="page\patient_home.Master" />
     <None Include="web.Debug.config">

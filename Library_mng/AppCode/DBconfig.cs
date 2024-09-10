@@ -15,8 +15,9 @@ namespace Library_mng.AppCode
     {
 
         SqlConnection dbconnection=new SqlConnection();
+        SqlConnection practice = new SqlConnection();
 
-       // SqlCommand cmd = new SqlCommand();
+        // SqlCommand cmd = new SqlCommand();
 
         SqlDataAdapter adapter = new SqlDataAdapter();
 
@@ -24,7 +25,10 @@ namespace Library_mng.AppCode
 
         public DBconfig()
         {
+             //dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
+
             dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
+           // dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["practice"].ConnectionString;
         }
 
 

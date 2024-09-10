@@ -112,9 +112,11 @@
                     <div class="col-md-3 border border-muted pb-4 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
+
                             <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateState();">
                                 <asp:ListItem>----Select State----</asp:ListItem>
                             </asp:DropDownList>
+
                         </div>
                     </div>
 
