@@ -113,7 +113,7 @@
                         <div class="form-group ">
                             <span class="text-danger">*</span>
 
-                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateState();">
+                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddstate_SelectedIndexChanged">
                                 <asp:ListItem>----Select State----</asp:ListItem>
                             </asp:DropDownList>
 
@@ -123,7 +123,7 @@
                     <div class="col-md-3  border border-muted  pb-4 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateDistrict();">
+                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateDistrict();"  OnSelectedIndexChanged="dddistrict_SelectedIndexChanged">
                                 <asp:ListItem>----Select District----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -134,7 +134,7 @@
                         <div class="form-group ">
                             <span class="text-danger">*</span>
 
-                            <asp:DropDownList ID="ddcity" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return Validatecity();">
+                            <asp:DropDownList ID="ddcity" runat="server" CssClass="form-control" AutoPostBack="true">
                                 <asp:ListItem>----Select City----</asp:ListItem>
                             </asp:DropDownList>
                         </div>

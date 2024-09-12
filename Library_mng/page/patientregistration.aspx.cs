@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Library_mng.page;
 
 namespace Library_mng
 {
@@ -19,16 +20,53 @@ namespace Library_mng
         DataSet ds = new DataSet();
 
 
+        protected void bindcity()
+        {
+            try
+            {
+           
+            cmd = new SqlCommand();
+
+            cmd.CommandText = "select * from [dbo].[tbl_city_info] where district_id=@district_id";
+
+            cmd.Parameters.AddWithValue("@district_id",dddistrict.SelectedValue);
+
+            ds = new DataSet();
+            ds = DB.get_data(cmd);
 
 
-        protected void bind2()
+
+                if (ds.Tables[0].Rows.Count>0)
+                        {
+
+                    ddcity.DataSource = ds;
+                    ddcity.DataTextField = "city_name";
+                    ddcity.DataValueField = "City_id";
+                    ddcity.DataBind();
+                    ddcity.Items.Insert(0, new ListItem("Select City", "0"));
+
+
+                }
+
+        }
+
+        catch(Exception ex)
+        {
+        
+        }
+
+        }
+
+        protected void binddistrict()
         {
 
             try
             {
 
                 cmd = new SqlCommand();
-                cmd.CommandText = "select * from tbl_district_info";
+                cmd.CommandText = "select * from [dbo].[tbl_district_info] where state_id=@state_id ";
+
+                cmd.Parameters.AddWithValue("@state_id", ddstate.SelectedValue);
 
                 ds = new DataSet();
                 ds = DB.get_data(cmd);
@@ -56,7 +94,7 @@ namespace Library_mng
             if (!IsPostBack)
             {
                 bind_state();
-                bind2();
+               
             }
         }
 
@@ -91,6 +129,14 @@ namespace Library_mng
 
         }
 
+        protected void ddstate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            binddistrict();
+        }
 
+        protected void dddistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bindcity();
+        }
     }
 }
