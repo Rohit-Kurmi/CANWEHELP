@@ -20,6 +20,14 @@ namespace Library_mng
         DataSet ds = new DataSet();
 
 
+
+
+
+
+
+
+
+
         protected void bindcity()
         {
             try
@@ -137,6 +145,39 @@ namespace Library_mng
         protected void dddistrict_SelectedIndexChanged(object sender, EventArgs e)
         {
             bindcity();
+        }
+
+        protected void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            SqlTransaction tn = null;
+
+            try
+            {
+                string gender = "";
+
+                if (rbtnMale.Checked == true)
+                {
+                    gender = rbtnMale.Text.Trim();
+                }
+
+                else
+                {
+                    gender = rbtnFemale.Text.Trim();
+                }
+
+
+
+                //querry= "inser into tbl_patient_registration_info(patient_id,state_id,district_id,city_id,fname,lname,gender,dob,email,phone_no,addres,pincode,blood_group) values(@patient_id,@state_id,@district_id,@city_id,@fname,@lname,@gender,@dob,@email,@phone_no,@addres,@pincode,@blood_group)"
+
+
+
+
+            }
+
+            catch (Exception ex ) 
+            { 
+            
+            }
         }
     }
 }

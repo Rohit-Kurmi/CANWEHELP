@@ -28,7 +28,7 @@ namespace Library_mng.AppCode
              //dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
 
             dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
-           // dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["practice"].ConnectionString;
+           //dbconnection.ConnectionString = ConfigurationManager.ConnectionStrings["practice"].ConnectionString;
         }
 
 
