@@ -8,7 +8,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Library_mng.page;
-
+using System.Data.Common;
+using System.Collections;
+using System.Configuration;
+using System.Data.Odbc;
 namespace Library_mng
 {
     public partial class patientregistration : System.Web.UI.Page
@@ -16,18 +19,11 @@ namespace Library_mng
 
         DBconfig DB = new DBconfig();
         SqlCommand cmd = new SqlCommand();
-
         DataSet ds = new DataSet();
+        
 
 
-
-
-
-
-
-
-
-
+        
         protected void bindcity()
         {
             try
@@ -147,37 +143,107 @@ namespace Library_mng
             bindcity();
         }
 
+
+
+
+
+
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
+            string querry = "";
+
+            SqlConnection DBcon = new SqlConnection();
+            DBcon.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
+
+
             SqlTransaction tn = null;
+            DBcon.Open();
 
             try
             {
-                string gender = "";
 
-                if (rbtnMale.Checked == true)
+                DateTime dob;
+                #region registration
+                string Gender = "";
+
+                if (DateTime.TryParse(txtdob.Text, out dob))
                 {
-                    gender = rbtnMale.Text.Trim();
+                    if (rbtnMale.Checked == true)
+                    {
+                        Gender = rbtnMale.Text.Trim();
+                    }
+                    else
+                    {
+                        Gender = rbtnFemale.Text.Trim();
+                    }
+                    Response.Write("<script>alert('Gender to be inserted: " + Gender + "')</script>");
+
+
+                    tn = DBcon.BeginTransaction();
+
+
+                    querry = "insert into tbl_patient_registration_info(state_id, district_id, city_id, fname, lname, gender,dob, email, phone_no, addres, pincode, blood_group)values(@state_id, @district_id, @city_id, @fname, @lname, @gender,@dob, @email, @phone_no, @addres, @pincode, @blood_group)";
+                    cmd = new SqlCommand();
+                    cmd.Connection = DBcon;
+                    cmd.Transaction = tn;
+                    cmd.CommandText = querry;
+
+                    cmd.Parameters.AddWithValue("@fname", Txtfn.Text.Trim());
+                    cmd.Parameters.AddWithValue("@lname", lastname.Text.Trim());
+                    cmd.Parameters.AddWithValue("@addres", txtaddress.Text.Trim());
+                    cmd.Parameters.AddWithValue("@phone_no", txtmobileno.Text.Trim());
+                    cmd.Parameters.AddWithValue("@email", txtgmail.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pincode", txtpin.Text.Trim());
+                    cmd.Parameters.AddWithValue("@gender", Gender);
+                    cmd.Parameters.AddWithValue("@dob", dob);
+                    cmd.Parameters.AddWithValue("@blood_group", DDbg.Text.ToString());
+                    cmd.Parameters.AddWithValue("@district_id", dddistrict.SelectedValue);
+                    cmd.Parameters.AddWithValue("@city_id", ddcity.SelectedValue);
+                    cmd.Parameters.AddWithValue("@state_id", ddstate.SelectedValue);
+                    cmd.ExecuteNonQuery();
+
+                    querry = "insert into [dbo].[tbl_patientlogin_info] (user_password,user_id) values (@pass,@user_id)";
+
+                    cmd = new SqlCommand();
+                    cmd.Connection = DBcon;
+                    cmd.Transaction = tn;
+                    cmd.CommandText = querry;
+
+                    cmd.Parameters.AddWithValue("@pass", txtpwd.Text.Trim());
+                    cmd.Parameters.AddWithValue("@user_id", txtcpwd.Text.Trim());
+                    cmd.ExecuteNonQuery();
+
+                    txtpwd.Text = "";
+                    txtcpwd.Text = "";
+                    Txtfn.Text = "";
+                    lastname.Text = "";
+                    txtmobileno.Text = "";
+                    txtgmail.Text = "";
+                    rbtnFemale.Checked = false;
+                    rbtnMale.Checked = false;
+                    txtpin.Text = "";
+                    txtdob.Text = "";
+                    txtaddress.Text = "";
+                    DDbg.Text = "";
+
+                    Response.Write("<script>alert('Data inserted successfully')</script>");
+
+
+                    tn.Commit();
+                    #endregion
+                    DBcon.Close();
+
+
                 }
-
-                else
-                {
-                    gender = rbtnFemale.Text.Trim();
-                }
-
-
-
-                //querry= "inser into tbl_patient_registration_info(patient_id,state_id,district_id,city_id,fname,lname,gender,dob,email,phone_no,addres,pincode,blood_group) values(@patient_id,@state_id,@district_id,@city_id,@fname,@lname,@gender,@dob,@email,@phone_no,@addres,@pincode,@blood_group)"
-
-
-
-
             }
 
-            catch (Exception ex ) 
-            { 
-            
+            catch (Exception ex)
+            {
+                tn.Rollback();
+                DBcon.Close();
+                Response.Write("<script>alert('Gender to be inserted: " + ex.Message + "')</script>");
+                
             }
         }
-    }
+        }
 }

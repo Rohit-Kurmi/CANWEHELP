@@ -24,13 +24,13 @@ namespace Library_mng
         protected global::System.Web.UI.WebControls.TextBox Txtfn;
 
         /// <summary>
-        /// TextBox1 control.
+        /// lastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox lastname;
 
         /// <summary>
         /// rbtnMale control.
@@ -94,15 +94,6 @@ namespace Library_mng
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtaddress;
-
-        /// <summary>
-        /// lblerroraddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblerroraddress;
 
         /// <summary>
         /// ddstate control.

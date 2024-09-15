@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="TextBox1" class="form-control" placeholder="Last Name" runat="server" onblur="return validateFname();"></asp:TextBox>
+                            <asp:TextBox ID="lastname" class="form-control" placeholder="Last Name" runat="server" onblur="return validateFname();"></asp:TextBox>
 
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     <div class="col-md-3 border border-muted pb-4 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="txtdob" class="form-control dob" runat="server" placeholder="DOB MM/DD/YYYY"></asp:TextBox>
+                            <asp:TextBox ID="txtdob" class="form-control dob" runat="server" textmode="Date" placeholder="DOB MM/DD/YYYY"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,6 @@
                         <div class="form-group">
                             <span class="text-danger">*</span>
                             <asp:TextBox ID="txtaddress" class="form-control" placeholder=" Address" TextMode="MultiLine" runat="server" onblur="Validateaddress();"></asp:TextBox>
-                            <asp:Label ID="lblerroraddress" CssClass="ErrorLabel" runat="server" Text="Label" Style="display: none; color: #ff0000"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -178,7 +177,7 @@
                     <div class="col-md-3 pb-4 py-4  border border-muted">
                         <div class="form-group ">
 
-                            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-warning text-white px-3 px-4"  OnClick="BtnSubmit_Click"/>
+                            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-warning text-white px-3 px-4" Onclick="BtnSubmit_Click" />
 
                       
                            
