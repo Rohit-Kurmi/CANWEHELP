@@ -32,7 +32,7 @@ namespace Library_mng.page
             try
             {
                 cmd = new SqlCommand();
-                cmd.CommandText = "Select * from tbl_patientlogin_info where Patient_ID=@Patient_ID";
+                cmd.CommandText = "Select * from tbl_patientlogin_info where user_id=@Patient_ID";
 
                 cmd.Parameters.AddWithValue("@Patient_ID", loginid.Text.Trim());
                 ds = new DataSet();

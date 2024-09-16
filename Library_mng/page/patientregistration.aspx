@@ -29,7 +29,6 @@
                         <div class="form-group">
                             <span class="text-danger">*</span>
                             <asp:TextBox ID="Txtfn" class="form-control" placeholder="First Name" runat="server" onblur="return validateFname();"></asp:TextBox>
-
                         </div>
                     </div>
 

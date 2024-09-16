@@ -168,31 +168,31 @@ namespace Library_mng
         protected global::System.Web.UI.WebControls.TextBox txtaddress;
 
         /// <summary>
-        /// ddstate control.
+        /// dddstate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddstate;
+        protected global::System.Web.UI.WebControls.DropDownList dddstate;
 
         /// <summary>
-        /// dddistrict control.
+        /// ddddistrict control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dddistrict;
+        protected global::System.Web.UI.WebControls.DropDownList ddddistrict;
 
         /// <summary>
-        /// ddcity control.
+        /// dddcity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddcity;
+        protected global::System.Web.UI.WebControls.DropDownList dddcity;
 
         /// <summary>
         /// txtpin control.

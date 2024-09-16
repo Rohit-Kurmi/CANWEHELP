@@ -224,7 +224,8 @@ namespace Library_mng
                     txtpin.Text = "";
                     txtdob.Text = "";
                     txtaddress.Text = "";
-                    DDbg.Text = "";
+   
+
 
                     Response.Write("<script>alert('Data inserted successfully')</script>");
 
@@ -241,7 +242,7 @@ namespace Library_mng
             {
                 tn.Rollback();
                 DBcon.Close();
-                Response.Write("<script>alert('Gender to be inserted: " + ex.Message + "')</script>");
+                Response.Write("<script>alert('exception: " + ex.Message + "')</script>");
                 
             }
         }

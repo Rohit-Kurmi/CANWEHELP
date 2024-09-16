@@ -131,7 +131,7 @@
                     <div class="col-md-3 border border-muted pb-5 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true">
+                            <asp:DropDownList ID="dddstate" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="dddstate_SelectedIndexChanged">
                                 <asp:ListItem>----Select State----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -140,7 +140,7 @@
                     <div class="col-md-3 border border-muted pb-5 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true">
+                            <asp:DropDownList ID="ddddistrict" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddddistrict_SelectedIndexChanged">
                                 <asp:ListItem>----Select District----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -150,7 +150,7 @@
                     <div class="col-md-3 border border-muted pb-5 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:DropDownList ID="ddcity" runat="server" CssClass="form-control" AutoPostBack="true">
+                            <asp:DropDownList ID="dddcity" runat="server" CssClass="form-control" AutoPostBack="true">
                                 <asp:ListItem>----Select City----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -194,7 +194,7 @@
 
                     <div class="col-md-3 pb-4 py-4  border border-muted">
                         <div class="form-group ">
-                            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-warning text-white px-3 px-4 rounded-pill" />
+                            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-warning text-white px-3 px-4 rounded-pill" Onclick="BtnSubmit_Click"/>
 
                         </div>
                     </div>
