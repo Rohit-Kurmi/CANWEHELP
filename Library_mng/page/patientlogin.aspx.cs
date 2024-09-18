@@ -32,17 +32,19 @@ namespace Library_mng.page
             try
             {
                 cmd = new SqlCommand();
-                cmd.CommandText = "Select * from tbl_patientlogin_info where user_id=@Patient_ID";
+                cmd.CommandText = "Select * from [dbo].[tbl_patientlogin_info] where patlogin_id=@patlogin_id";
 
-                cmd.Parameters.AddWithValue("@Patient_ID", loginid.Text.Trim());
+                cmd.Parameters.AddWithValue("@patlogin_id", loginid.Text.Trim());
                 ds = new DataSet();
 
                 ds = DB.get_data(cmd);
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (ds.Tables[0].Rows[0]["user_password"].ToString() == passwordp.Text.Trim())
+                    if (ds.Tables[0].Rows[0]["pwd"].ToString() == passwordp.Text.Trim())
                     {
+                        Session["user"] = loginid.Text.Trim();
+                        Response.Redirect("patienthome.aspx");
 
 
 

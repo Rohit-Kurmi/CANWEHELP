@@ -166,8 +166,7 @@ namespace Library_mng
                 #region registration
                 string Gender = "";
 
-                if (DateTime.TryParse(txtdob.Text, out dob))
-                {
+                
                     if (rbtnMale.Checked == true)
                     {
                         Gender = rbtnMale.Text.Trim();
@@ -195,22 +194,25 @@ namespace Library_mng
                     cmd.Parameters.AddWithValue("@email", txtgmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@pincode", txtpin.Text.Trim());
                     cmd.Parameters.AddWithValue("@gender", Gender);
+                if (DateTime.TryParse(txtdob.Text, out dob))
+                {
                     cmd.Parameters.AddWithValue("@dob", dob);
-                    cmd.Parameters.AddWithValue("@blood_group", DDbg.Text.ToString());
+                }
+                cmd.Parameters.AddWithValue("@blood_group", DDbg.Text.ToString());
                     cmd.Parameters.AddWithValue("@district_id", dddistrict.SelectedValue);
                     cmd.Parameters.AddWithValue("@city_id", ddcity.SelectedValue);
                     cmd.Parameters.AddWithValue("@state_id", ddstate.SelectedValue);
                     cmd.ExecuteNonQuery();
 
-                    querry = "insert into [dbo].[tbl_patientlogin_info] (user_password,user_id) values (@pass,@user_id)";
+                    querry = "insert into [dbo].[tbl_patientlogin_info] (pwd,patlogin_id) values (@pwd,@patlogin_id)";
 
                     cmd = new SqlCommand();
                     cmd.Connection = DBcon;
                     cmd.Transaction = tn;
                     cmd.CommandText = querry;
 
-                    cmd.Parameters.AddWithValue("@pass", txtpwd.Text.Trim());
-                    cmd.Parameters.AddWithValue("@user_id", txtcpwd.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pwd", txtpwd.Text.Trim());
+                    cmd.Parameters.AddWithValue("@patlogin_id", txtgmail.Text.Trim());
                     cmd.ExecuteNonQuery();
 
                     txtpwd.Text = "";
@@ -234,9 +236,11 @@ namespace Library_mng
                     #endregion
                     DBcon.Close();
 
+               
 
-                }
+
             }
+           
 
             catch (Exception ex)
             {
@@ -245,6 +249,7 @@ namespace Library_mng
                 Response.Write("<script>alert('exception: " + ex.Message + "')</script>");
                 
             }
+            Response.Redirect("patientlogin.aspx");
         }
         }
 }

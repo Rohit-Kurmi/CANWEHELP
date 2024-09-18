@@ -256,6 +256,7 @@ namespace Library_mng
                 tnn.Commit();
                 conn.Close();
                 Response.Write("<script>alert('Data inserted successfully')</script>");
+                
 
             }
 
@@ -265,7 +266,7 @@ namespace Library_mng
                 conn.Close();
                 Response.Write("<script>alert('exception to be inserted: " + ex.Message + "')</script>");
             }
-
+            Response.Redirect("Hospitalregistration.aspx");
 
         }
 

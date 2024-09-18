@@ -30,7 +30,7 @@ namespace Library_mng.page
             try
             {
                 cmd= new SqlCommand();
-                cmd.CommandText= "Select * from  tbl_hospitallogin_info  where hospital_id=@hospital_id";
+                cmd.CommandText= "Select * from  tbl_hospitallogin_info  where hoslogin_id=@hospital_id";
                     cmd.Parameters.AddWithValue("@hospital_id", hloginidtxt.Text.Trim());
                 ds= new DataSet();
                 ds = DB.get_data(cmd);
@@ -38,7 +38,7 @@ namespace Library_mng.page
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    if (ds.Tables[0].Rows[0]["hosp_password"].ToString() == passwordp.Text.Trim())
+                    if (ds.Tables[0].Rows[0]["pwd"].ToString() == passwordp.Text.Trim())
                     {
 
 

@@ -88,6 +88,7 @@
     <Content Include="css\ourteam.css" />
     <Content Include="css\service_process.css" />
     <Content Include="for help of master page.aspx" />
+    <Content Include="page\hospitalhome.aspx" />
     <Content Include="page\Hospitalregistration.aspx" />
     <Content Include="images\24hour.png" />
     <Content Include="images\about.jpg" />
@@ -171,6 +172,20 @@
     </Compile>
     <Compile Include="for help of master page.aspx.designer.cs">
       <DependentUpon>for help of master page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\adminmasterpage.Master.cs">
+      <DependentUpon>adminmasterpage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\adminmasterpage.Master.designer.cs">
+      <DependentUpon>adminmasterpage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="page\hospitalhome.aspx.cs">
+      <DependentUpon>hospitalhome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\hospitalhome.aspx.designer.cs">
+      <DependentUpon>hospitalhome.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\Hospitalregistration.aspx.cs">
       <DependentUpon>Hospitalregistration.aspx</DependentUpon>
@@ -320,6 +335,7 @@
     <Content Include="page\Hospitallogin.aspx" />
     <Content Include="page\login1.aspx" />
     <Content Include="page\masterpage.Master" />
+    <Content Include="page\adminmasterpage.Master" />
     <None Include="page\packages.config" />
     <Content Include="page\Ourteam.aspx" />
     <Content Include="page\patientfeedback.aspx" />
