@@ -88,7 +88,9 @@
     <Content Include="css\ourteam.css" />
     <Content Include="css\service_process.css" />
     <Content Include="for help of master page.aspx" />
+    <Content Include="page\doctorregistration.aspx" />
     <Content Include="page\hospitalhome.aspx" />
+    <Content Include="page\hospitalpatientreg.aspx" />
     <Content Include="page\Hospitalregistration.aspx" />
     <Content Include="images\24hour.png" />
     <Content Include="images\about.jpg" />
@@ -180,12 +182,26 @@
     <Compile Include="page\adminmasterpage.Master.designer.cs">
       <DependentUpon>adminmasterpage.Master</DependentUpon>
     </Compile>
+    <Compile Include="page\doctorregistration.aspx.cs">
+      <DependentUpon>doctorregistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\doctorregistration.aspx.designer.cs">
+      <DependentUpon>doctorregistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\hospitalhome.aspx.cs">
       <DependentUpon>hospitalhome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="page\hospitalhome.aspx.designer.cs">
       <DependentUpon>hospitalhome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\hospitalpatientreg.aspx.cs">
+      <DependentUpon>hospitalpatientreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\hospitalpatientreg.aspx.designer.cs">
+      <DependentUpon>hospitalpatientreg.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\Hospitalregistration.aspx.cs">
       <DependentUpon>Hospitalregistration.aspx</DependentUpon>

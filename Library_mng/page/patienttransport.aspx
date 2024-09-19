@@ -68,7 +68,7 @@
                 <div class="row d-md-flex">
                     <div class="col-md-3 border border-muted pb-4 py-5">
                         <div class="form-group">
-                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true">
+                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddstate_SelectedIndexChanged">
                                 <asp:ListItem>----Select State----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -76,7 +76,7 @@
 
                     <div class="col-md-3 border border-muted pb-4 py-5">
                         <div class="form-group ">
-                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true">
+                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="dddistrict_SelectedIndexChanged">
                                 <asp:ListItem>----Select District----</asp:ListItem>
                             </asp:DropDownList>
                         </div>

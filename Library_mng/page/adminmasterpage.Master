@@ -144,7 +144,7 @@
         <div class="sidebar-content">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" href="#">Home</a>
+                    <a class="nav-link active text-white" href="hospitalhome.aspx">Home</a>
                 </li>
                 
                 <!-- Doctor Link with Dropdown -->
@@ -156,7 +156,7 @@
                     <div class="collapse" id="doctorMenu">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Registration</a>
+                                <a class="nav-link text-white" href="doctorregistration.aspx">Registration</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">Check Details</a>
@@ -174,7 +174,7 @@
                     <div class="collapse" id="patientMenu">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Registration</a>
+                                <a class="nav-link text-white" href="hospitalpatientreg.aspx">Registration</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#">Check Details</a>
@@ -207,23 +207,26 @@
 
     <!-- Main content that will slide along with sidebar -->
     <div class="content" id="mainContent">
-        <h1>Welcome to CanWeHelp</h1>
-        <p>This is your main content area. The sidebar will slide out when toggled, and this content will move along with it.</p>
-    
+       
 
-    <!-- JavaScript to Toggle Sidebar and Slide Content -->
-    <script>
-        document.getElementById('toggleSidebar').addEventListener('click', function () {
-            var sidebar = document.getElementById('sidebar');
-            var content = document.getElementById('mainContent');
-            sidebar.classList.toggle('show');
-            content.classList.toggle('shifted');
-        });
-    </script>
+   
+
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
       </div>
+
+     <!-- JavaScript to Toggle Sidebar and Slide Content -->
+        <script>
+            document.getElementById('toggleSidebar').addEventListener('click', function () {
+                var sidebar = document.getElementById('sidebar');
+                var content = document.getElementById('mainContent');
+                sidebar.classList.toggle('show');
+                content.classList.toggle('shifted');
+            });
+        </script>
+
+
 <!-- Footer -->
 <div class="footer">
     Copyright ©2024 All rights reserved - CanWeHelp
