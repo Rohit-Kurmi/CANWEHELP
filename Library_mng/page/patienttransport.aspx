@@ -105,7 +105,7 @@
                         <div class="form-group ">
                             <div class="input-wrap">
                                 <span class="text-danger">*</span>
-                                <asp:TextBox ID="txtdate" class="form-control  dob" placeholder="Date MM/DD/YYYY" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtdate" class="form-control  dob" textmode="Date" placeholder="Date MM/DD/YYYY" runat="server"></asp:TextBox>
                             </div>
                         </div>
                         <script>
@@ -151,14 +151,11 @@
                         };
                     </script>
 
-                </div>
-
-
-                <div class="row d-md-flex ">
+                
 
                     <div class="col-md-3 border border-muted pb-4 py-4">
                         <div class="form-group">
-                            <asp:Button ID="BtnSubmit" runat="server" Text="send Transport Request" class="btn  btn-info" />
+                            <asp:Button ID="BtnSubmit" runat="server" Text="send Transport Request" class="btn  btn-info" Onclick="BtnSubmit_Click"/>
                         </div>
                     </div>
 
