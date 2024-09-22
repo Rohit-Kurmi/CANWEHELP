@@ -216,8 +216,13 @@ namespace Library_mng.page
             txtdate.Text = "";
             ddpro.Text = "";
             txtaddress.Text = "";
+            ddstate.SelectedValue = "0";
+            ddspecility.SelectedValue="0";  
 
-            tn.Commit();
+            dddistrict.Items.Clear();
+            ddcity.Items.Clear();
+
+                tn.Commit();
             #endregion
             DBcon.Close();
 

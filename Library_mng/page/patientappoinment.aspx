@@ -54,7 +54,6 @@
                             <asp:DropDownList ID="ddspecility" runat="server" CssClass="form-control">
                                 <asp:ListItem>----Select speciality----</asp:ListItem>
                             </asp:DropDownList>
-                            <asp:Label ID="lblerrorspec" CssClass="ErrorLabel" runat="server" Text="Label" Style="display: none; color: #ff0000"></asp:Label>
                         </div>
                     </div>
 
@@ -79,31 +78,14 @@
 
                             
                         </div>
-                        <script>
-                            $('.clockpicker').clockpicker({
-                                'default': DisplayCurrentTime(),
-                                twelvehour: true,
-                            }).find('txttime').val(DisplayCurrentTime())
-
-                            function DisplayCurrentTime() {
-                                var date = new Date();
-                                var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-                                var am_pm = date.getHours() >= 12 ? "PM" : "AM";
-                                hours = hours < 10 ? "0" + hours : hours;
-                                var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-                                var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-                                time = hours + ":" + minutes + ":" + am_pm;
-                                //time = hours + ":" + minutes + am_pm;
-                                return time;
-                            };
-                        </script>
+                       
                     </div>
 
                     <div class="col-md-3 border border-muted pb-4 py-4">
                         <div class="form-group ">
                                 <div class="icon"><span class="ion-md-calendar"></span><span class="text-danger">*</span></div>
 
-                                <asp:TextBox ID="txtdate" class="form-control dob" runat="server" placeholder="date MM/DD/YYYY"></asp:TextBox>
+                                <asp:TextBox ID="txtdate" class="form-control dob" runat="server" placeholder="date MM/DD/YYYY"  TextMode="Date"></asp:TextBox>
                             
 
                         </div>
@@ -112,7 +94,7 @@
                     <div class="col-md-3 border border-muted pb-4 py-4">
 
                         <div class="form-group ">
-                            <asp:Button ID="BtnSubmit" runat="server" Text="send Appointment Request" class="btn  btn-info" />
+                            <asp:Button ID="BtnSubmit" runat="server" Text="send Appointment Request" class="btn  btn-info" Onclick="BtnSubmit_Click"/>
                            
                         </div>
                     </div>

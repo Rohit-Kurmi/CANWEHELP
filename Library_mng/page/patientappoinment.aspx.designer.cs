@@ -51,15 +51,6 @@ namespace Library_mng
         protected global::System.Web.UI.WebControls.DropDownList ddspecility;
 
         /// <summary>
-        /// lblerrorspec control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblerrorspec;
-
-        /// <summary>
         /// dddoctor control.
         /// </summary>
         /// <remarks>
