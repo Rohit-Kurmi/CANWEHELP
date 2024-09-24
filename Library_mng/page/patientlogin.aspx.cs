@@ -43,7 +43,20 @@ namespace Library_mng.page
                 {
                     if (ds.Tables[0].Rows[0]["pwd"].ToString() == passwordp.Text.Trim())
                     {
-                        Session["user"] = loginid.Text.Trim();
+
+
+                        cmd = new SqlCommand();
+                        cmd.CommandText = "select patient_id from tbl_patient_registration_info where email=@email";
+                        cmd.Parameters.AddWithValue("@email", loginid.Text.Trim());
+                        ds=new DataSet();
+                        ds=DB.get_data(cmd);
+
+                        if (ds.Tables[0].Rows.Count>0)
+                        {
+                            Session["user"]=  ds.Tables[0].Rows[0]["patient_id"].ToString();
+                        }
+
+
                         Response.Redirect("patienthome.aspx");
 
 

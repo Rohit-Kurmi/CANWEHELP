@@ -31,24 +31,7 @@
                             <span class="text-danger">*</span>
                             <asp:TextBox ID="txtfromtime" class="form-control " placeholder="From Time" runat="server"></asp:TextBox>
                         </div>
-                        <script>
-                            $('.clockpicker').clockpicker({
-                                'default': DisplayCurrentTime(),
-                                twelvehour: true,
-                            }).find('txtfromtime').val(DisplayCurrentTime())
-
-                            function DisplayCurrentTime() {
-                                var date = new Date();
-                                var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-                                var am_pm = date.getHours() >= 12 ? "PM" : "AM";
-                                hours = hours < 10 ? "0" + hours : hours;
-                                var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-                                var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-                                time = hours + ":" + minutes + ":" + am_pm;
-                                //time = hours + ":" + minutes + am_pm;
-                                return time;
-                            };
-                        </script>
+                       
 
                     </div>
                     <div class="col-md-3 border border-muted   py-4">
@@ -56,24 +39,7 @@
                             <span class="text-danger">*</span>
                             <asp:TextBox ID="txttotime" class="form-control " placeholder="To Time" runat="server"></asp:TextBox>
                         </div>
-                        <script>
-                            $('.clockpicker').clockpicker({
-                                'default': DisplayCurrentTime(),
-                                twelvehour: true,
-                            }).find('txttotime').val(DisplayCurrentTime())
-
-                            function DisplayCurrentTime() {
-                                var date = new Date();
-                                var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-                                var am_pm = date.getHours() >= 12 ? "PM" : "AM";
-                                hours = hours < 10 ? "0" + hours : hours;
-                                var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-                                var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-                                time = hours + ":" + minutes + ":" + am_pm;
-                                //time = hours + ":" + minutes + am_pm;
-                                return time;
-                            };
-                        </script>
+                       
                     </div>
 
                     <div class="col-md-3 tool-box border border-muted  py-4">
@@ -105,21 +71,10 @@
                         <div class="form-group ">
                             <span class="text-danger">*</span>
 
-                            <asp:TextBox ID="txtdate" class="form-control  " placeholder="Date" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtdate" class="form-control" Textmode="Date" placeholder="Date" runat="server"></asp:TextBox>
 
                         </div>
-                        <script>
-
-                            //for celender
-                            $(function () {
-                                $(".dob").datepicker({
-                                    changeMonth: true,
-                                    changeYear: true,
-                                    dateFormat: 'dd/mm/yy'
-                                });
-                            });
-                            //for celender
-                        </script>
+                     
                     </div>
                     <div class="col-md-3 border border-muted  py-4">
                         <div class="form-group ">
@@ -156,7 +111,7 @@
                         <div class="form-group ">
                             <span class="text-danger">*</span>
 
-                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control">
+                            <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddstate_SelectedIndexChanged">
                                 <asp:ListItem>----Select State----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -165,7 +120,7 @@
                     <div class="col-md-3 border border-muted   py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control">
+                            <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="dddistrict_SelectedIndexChanged" >
                                 <asp:ListItem>----Select District----</asp:ListItem>
                             </asp:DropDownList>
                         </div>
@@ -221,7 +176,7 @@
       <div class="col-md-3 border border-muted   py-4">
 
           <div class="form-group ">
-              <asp:Button ID="BtnSubmit" runat="server" Text="Send Homecare Request" class="btn btn-secondary btn-info"/>
+              <asp:Button ID="BtnSubmit" runat="server" Text="Send Homecare Request" class="btn btn-secondary btn-info" OnClick ="BtnSubmit_Click"/>
           </div>
       </div>
   </div>
