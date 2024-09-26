@@ -69,15 +69,17 @@
             <div class="row d-md-flex">
                 <div class="col-md-3 border border-muted   py-4">
                     <div class="form-group ">
-                          <span class="mandatory">*</span>
-                            <asp:TextBox ID="txtdate" class="form-control  dob" placeholder="Date MM/DD/YYYY" runat="server"></asp:TextBox>
+                          <span class="text-danger">*</span>
+                        <label for="txtdate">Date</label>
+                            <asp:TextBox ID="txtdate" class="form-control  dob" TextMode="Date" placeholder="Date MM/DD/YYYY" runat="server"></asp:TextBox>
                         </div>
                 </div>
 
                 <div class="col-md-3 border border-muted   py-4">
                     <div class="form-group">
                               <span class="text-danger">*</span>
-                            <asp:TextBox ID="txttime" class="form-control " placeholder="Time" runat="server"></asp:TextBox>
+                        <label for="txttime">Time</label>
+                            <asp:TextBox ID="txttime" class="form-control " Textmode="Time" placeholder="Time" runat="server"></asp:TextBox>
                         </div>
                   
                     <script>
@@ -103,7 +105,7 @@
                 <div class="col-md-3 border border-muted   py-4">
 
                     <div class="form-group ">
-                        <asp:Button ID="BtnSubmit" runat="server" Text="Send Homecare Request" class="btn btn-secondary btn-info"  />
+                        <asp:Button ID="BtnSubmit" runat="server" Text="Send Homecare Request" class="btn btn-secondary btn-info" Onclick="BtnSubmit_Click" />
                     </div>
                 </div>
             </div>

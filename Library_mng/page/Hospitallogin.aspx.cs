@@ -41,6 +41,18 @@ namespace Library_mng.page
                     if (ds.Tables[0].Rows[0]["pwd"].ToString() == passwordp.Text.Trim())
                     {
 
+                        cmd=new SqlCommand();
+                        cmd.CommandText = "select hospital_id from [dbo].[tbl_hospital_registration_info] where email= @emai_id ";
+
+                        cmd.Parameters.AddWithValue("@emai_id", hloginidtxt.Text.Trim());
+                        ds = new DataSet();
+                        ds = DB.get_data(cmd);
+                        
+                        if(ds.Tables[0].Rows.Count > 0)
+                        {
+                            Session["user"]= ds.Tables[0].Rows[0]["hospital_id"].ToString();
+                            Response.Redirect("hospitalhome.aspx");
+                        }
 
 
                         Response.Write("<script>alert('User Exist')</script>");

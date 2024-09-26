@@ -46,18 +46,18 @@ namespace Library_mng.page
 
 
                         cmd = new SqlCommand();
-                        cmd.CommandText = "select patient_id from tbl_patient_registration_info where email=@email";
+                        cmd.CommandText = "select patinet_id from tbl_patient_registration_info where email=@email";
                         cmd.Parameters.AddWithValue("@email", loginid.Text.Trim());
                         ds=new DataSet();
                         ds=DB.get_data(cmd);
 
                         if (ds.Tables[0].Rows.Count>0)
                         {
-                            Session["user"]=  ds.Tables[0].Rows[0]["patient_id"].ToString();
+                            Session["user"]=  ds.Tables[0].Rows[0]["patinet_id"].ToString();
                         }
 
 
-                        Response.Redirect("patienthome.aspx");
+                        Response.Redirect("hospitalhome.aspx");
 
 
 

@@ -29,7 +29,8 @@
                     <div class="col-md-3 border border-muted   py-4">
                         <div class="form-group">
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="txtfromtime" class="form-control " placeholder="From Time" runat="server"></asp:TextBox>
+                            <lable for="txtfromtime" runat="server">From Time</lable>
+                            <asp:TextBox ID="txtfromtime" class="form-control " textmode="Time" placeholder="From Time" runat="server"></asp:TextBox>
                         </div>
                        
 
@@ -37,7 +38,8 @@
                     <div class="col-md-3 border border-muted   py-4">
                         <div class="form-group">
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="txttotime" class="form-control " placeholder="To Time" runat="server"></asp:TextBox>
+                             <lable for="txttotime" runat="server">To Time</lable>
+                            <asp:TextBox ID="txttotime" class="form-control " textmode="Time" placeholder="To Time" runat="server"></asp:TextBox>
                         </div>
                        
                     </div>

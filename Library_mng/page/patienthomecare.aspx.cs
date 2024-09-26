@@ -212,6 +212,7 @@ namespace Library_mng.page
             try
             {
                 DateTime dob;
+                TimeSpan time;
                 int pid;
                 pid = Convert.ToInt32( Session["user"]);
 
@@ -219,8 +220,8 @@ namespace Library_mng.page
                 cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.Transaction = tnn;
-                cmd.CommandText = "insert into tbl_homecare_info(patient_id,hospital_id,state_id,distict_id,city_id,specility_id,from_data,how_many_days,problem_type,problem_description,address,pincode,services)" +
-                                                                 " values (@patient_id,@hospital_id,@state_id,@distict_id,@city_id,@specility_id,@from_data,@how_many_days,@problem_type,@problem_description,@address,@pincode,@services)";
+                cmd.CommandText = "insert into tbl_homecare_info(patient_id,hospital_id,state_id,distict_id,city_id,specility_id,from_data,how_many_days,from_time,to_tmie,problem_type,problem_description,address,pincode,services)" +
+                                                                 " values (@patient_id,@hospital_id,@state_id,@distict_id,@city_id,@specility_id,@from_data,@how_many_days,@from_time,@to_tmie,@problem_type,@problem_description,@address,@pincode,@services)";
 
                 cmd.Parameters.AddWithValue("@hospital_id", ddhospital.SelectedValue);
                 cmd.Parameters.AddWithValue("@state_id",ddstate.SelectedValue);
@@ -229,6 +230,15 @@ namespace Library_mng.page
                 cmd.Parameters.AddWithValue("@specility_id",ddspecility.SelectedValue);
                 cmd.Parameters.AddWithValue("@patient_id", pid);
                 
+                if(TimeSpan.TryParse(txtfromtime.Text, out  time))
+                {
+                    cmd.Parameters.AddWithValue("@from_time", time);
+                }
+
+                if(TimeSpan.TryParse(txttotime.Text, out time))
+                {
+                    cmd.Parameters.AddWithValue("@to_tmie", time);
+                }
 
                 if (DateTime.TryParse(txtdate.Text, out dob))
                     { 

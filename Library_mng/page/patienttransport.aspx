@@ -128,7 +128,7 @@
                         <div class="form-group">
 
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="txttime" class="form-control " placeholder="Time" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txttime" class="form-control " TextMode="Time" placeholder="Time" runat="server"></asp:TextBox>
 
                         </div>
                     </div>

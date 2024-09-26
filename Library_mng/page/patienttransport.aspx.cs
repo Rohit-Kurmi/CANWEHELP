@@ -183,13 +183,18 @@ namespace Library_mng.page
 
         try
         {
+                int pid;
+                pid = Convert.ToInt32(Session["user"]);
+            TimeSpan time;
             DateTime dob;
             #region registration
+
 
             tn = DBcon.BeginTransaction();
 
 
-            querry = "insert into [dbo].[tbl_transport_info](state_id, district_id, city_id, speciality_idi, trans_date,problem_description, address,pincode,problem_type)values(@state_id, @district_id, @city_id, @speciality_idi, @trans_date ,@problem_description, @address,@pincode,@problem_type)";
+            querry = "insert into [dbo].[tbl_transport_info](patient_id,state_id, district_id, city_id, speciality_idi, trans_date,trans_time,problem_description, address,pincode,problem_type)values" +
+                    "(@patient_id,@state_id, @district_id, @city_id, @speciality_idi, @trans_date,@trans_time,@problem_description, @address,@pincode,@problem_type)";
             cmd = new SqlCommand();
             cmd.Connection = DBcon;
             cmd.Transaction = tn;
@@ -198,6 +203,13 @@ namespace Library_mng.page
             cmd.Parameters.AddWithValue("@state_id", ddstate.SelectedValue);
             cmd.Parameters.AddWithValue("@district_id", dddistrict.SelectedValue);
             cmd.Parameters.AddWithValue("@city_id", ddcity.SelectedValue);
+                cmd.Parameters.AddWithValue("@patient_id", pid);
+                if (TimeSpan.TryParse(txttime.Text, out time))
+                {
+
+                    cmd.Parameters.AddWithValue("@trans_time",time);
+                }
+                
 
             if (DateTime.TryParse(txtdate.Text, out dob))
             {
