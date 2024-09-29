@@ -57,51 +57,65 @@
                         </div>
                     </div>
 
-                    <div class="col-md-3  border border-muted pb-4 py-4">
+                    
+
+                    <div class="col-md-3 border border-muted pb-4 py-4">
                         <div class="form-group ">
                             <span class="text-danger">*</span>
-                            <asp:DropDownList ID="dddoctor" runat="server" CssClass="form-control">
-                                <asp:ListItem>----Select doctor----</asp:ListItem>
+
+                            <asp:DropDownList ID="ddhospital" class="form-control dob" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddhospital_SelectedIndexChanged1">
+                                <asp:ListItem>----Select hospital----</asp:ListItem>
                             </asp:DropDownList>
+
+
                         </div>
                     </div>
-                </div>
+
+                    </div>
+
+                    <div class="row d-md-flex ">
 
 
-
-                <div class="row d-md-flex ">
-                    <div class="col-md-3 border border-muted pb-4 py-4">
-                        <div class="form-group">
-                            
+                        <div class="col-md-3  border border-muted pb-4 py-4">
+                            <div class="form-group ">
                                 <span class="text-danger">*</span>
-                                <asp:TextBox ID="txttime" class="form-control " placeholder="Time" runat="server"></asp:TextBox>
-
-                            
+                                <asp:DropDownList ID="dddoctor" runat="server" CssClass="form-control">
+                                    <asp:ListItem>----Select doctor----</asp:ListItem>
+                                </asp:DropDownList>
+                            </div>
                         </div>
-                       
-                    </div>
 
-                    <div class="col-md-3 border border-muted pb-4 py-4">
-                        <div class="form-group ">
-                                <div class="icon"><span class="ion-md-calendar"></span><span class="text-danger">*</span></div>
 
-                                <asp:TextBox ID="txtdate" class="form-control dob" runat="server" placeholder="date MM/DD/YYYY"  TextMode="Date"></asp:TextBox>
-                            
+                        <div class="col-md-3 border border-muted pb-4 py-4">
+                            <div class="form-group">
+
+                                <span class="text-danger">*</span>
+                                <label runat="server">Time</label>
+                                <asp:TextBox ID="txttime" class="form-control " TextMode="Time" placeholder="Time" runat="server"></asp:TextBox>
+
+
+                            </div>
 
                         </div>
-                    </div>
 
-                    <div class="col-md-3 border border-muted pb-4 py-4">
+                        <div class="col-md-3 border border-muted pb-4 py-4">
+                            <div>
+                                <span class="text-danger">*</span>
+                                <label runat="server">Date</label>
+                                <asp:TextBox ID="txtdate" class="form-control dob" runat="server" placeholder="date MM/DD/YYYY" TextMode="Date"></asp:TextBox>
 
-                        <div class="form-group ">
-                            <asp:Button ID="BtnSubmit" runat="server" Text="send Appointment Request" class="btn  btn-info" Onclick="BtnSubmit_Click"/>
-                           
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 border border-muted pb-4 py-4">
+
+                            <div class="form-group ">
+                                <asp:Button ID="BtnSubmit" runat="server" Text="send Appointment Request" class="btn  btn-info" OnClick="BtnSubmit_Click" />
+
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
-
             </form>
         </div>
     </div>

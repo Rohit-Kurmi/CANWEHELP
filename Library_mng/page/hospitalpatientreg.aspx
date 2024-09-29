@@ -111,7 +111,7 @@
                      <div class="form-group ">
                          <span class="text-danger">*</span>
 
-                         <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" >
+                         <asp:DropDownList ID="ddstate" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateDistrict();" OnSelectedIndexChanged="ddstate_SelectedIndexChanged">
                              <asp:ListItem>----Select State----</asp:ListItem>
                          </asp:DropDownList>
 
@@ -121,7 +121,7 @@
                  <div class="col-md-3  border border-muted  pb-4 py-4">
                      <div class="form-group ">
                          <span class="text-danger">*</span>
-                         <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateDistrict();" >
+                         <asp:DropDownList ID="dddistrict" runat="server" CssClass="form-control" AutoPostBack="true" onblur="return ValidateDistrict();" OnSelectedIndexChanged="dddistrict_SelectedIndexChanged">
                              <asp:ListItem>----Select District----</asp:ListItem>
                          </asp:DropDownList>
                      </div>
@@ -176,7 +176,7 @@
                  <div class="col-md-3 pb-4 py-4  border border-muted">
                      <div class="form-group ">
 
-                         <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-info text-white px-3 px-4"  />
+                         <asp:Button ID="BtnSubmit" runat="server" Text="Submit" class=" form-control submit bg-info text-white px-3 px-4" OnClick="BtnSubmit_Click" />
 
                    
                         

@@ -87,7 +87,12 @@
     <Content Include="css\login.css" />
     <Content Include="css\ourteam.css" />
     <Content Include="css\service_process.css" />
+    <Content Include="page\appoinment_details.aspx" />
+    <Content Include="page\checkdoctordetails.aspx" />
+    <Content Include="page\checkup_pat_details.aspx" />
+    <Content Include="page\details_patient_homecare.aspx" />
     <Content Include="page\doctorregistration.aspx" />
+    <Content Include="page\helthcheckuprequest.aspx" />
     <Content Include="page\hospitalhome.aspx" />
     <Content Include="page\hospitalpatientreg.aspx" />
     <Content Include="page\Hospitalregistration.aspx" />
@@ -174,12 +179,47 @@
     <Compile Include="page\adminmasterpage.Master.designer.cs">
       <DependentUpon>adminmasterpage.Master</DependentUpon>
     </Compile>
+    <Compile Include="page\appoinment_details.aspx.cs">
+      <DependentUpon>appoinment_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\appoinment_details.aspx.designer.cs">
+      <DependentUpon>appoinment_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\checkdoctordetails.aspx.cs">
+      <DependentUpon>checkdoctordetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\checkdoctordetails.aspx.designer.cs">
+      <DependentUpon>checkdoctordetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\checkup_pat_details.aspx.cs">
+      <DependentUpon>checkup_pat_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\checkup_pat_details.aspx.designer.cs">
+      <DependentUpon>checkup_pat_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\details_patient_homecare.aspx.cs">
+      <DependentUpon>details_patient_homecare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\details_patient_homecare.aspx.designer.cs">
+      <DependentUpon>details_patient_homecare.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\doctorregistration.aspx.cs">
       <DependentUpon>doctorregistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="page\doctorregistration.aspx.designer.cs">
       <DependentUpon>doctorregistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\helthcheckuprequest.aspx.cs">
+      <DependentUpon>helthcheckuprequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\helthcheckuprequest.aspx.designer.cs">
+      <DependentUpon>helthcheckuprequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\hospitalhome.aspx.cs">
       <DependentUpon>hospitalhome.aspx</DependentUpon>

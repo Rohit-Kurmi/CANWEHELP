@@ -90,7 +90,7 @@ namespace Library_mng
                 Response.Write("<script>alert('exception is district: " + ex.Message + "')</script>");
             }
         }
-        
+
         public void bind_city()
         {
 
@@ -144,7 +144,7 @@ namespace Library_mng
             string Nurse_At_Home_Availability = "";
             string Is_there_Emergency_Service = "";
             string Is_there_Any_Dispensary = "";
-            
+
             if (RBdocyes.Checked == true)
             {
                 Doctor_At_Home_Availability = RBdocyes.Text.Trim();
@@ -197,7 +197,7 @@ namespace Library_mng
             try
             {
                 tnn = conn.BeginTransaction();
-                
+
                 query = "Insert into [dbo].[tbl_hospital_registration_info](state_id, district_id, city_id,hospital_name,registration_no,email,website,working_hours,phone_no,telephone_no,dispensary_avail,doc_home_avail,nurse_home_avail,emergency_ser_avail,address,pincode) " +
                     "values (@state_id,@district_id,@city_id,@hospital_name,@registration_no,@email,@website,@working_hours,@phone_no,@telephone_no,@dispensary_avail,@doc_home_avail,@nurse_home_avail,@emergency_ser_avail,@address,@pincode)";
 
@@ -225,9 +225,9 @@ namespace Library_mng
                 cmd.Parameters.AddWithValue("@doc_home_avail", Doctor_At_Home_Availability);
                 cmd.Parameters.AddWithValue("@nurse_home_avail", Nurse_At_Home_Availability);
                 cmd.Parameters.AddWithValue("@emergency_ser_avail", Is_there_Emergency_Service);
-                cmd.ExecuteNonQuery(); 
+                cmd.ExecuteNonQuery();
 
-                query= "insert into tbl_hospitallogin_info(hospital_id,hoslogin_id,pwd) values(@hospital_id,@hoslogin_id,@pwd)";
+                query = "insert into tbl_hospitallogin_info(hospital_name,hoslogin_id,pwd) values(@hospital_id,@hoslogin_id,@pwd)";
                 cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.Transaction = tnn;
@@ -238,7 +238,7 @@ namespace Library_mng
                 cmd.Parameters.AddWithValue("@pwd", txtpwd.Text.Trim());
                 cmd.ExecuteNonQuery();
 
-                Txtname.Text= "";
+                Txtname.Text = "";
                 txtregistrationno.Text = "";
                 txtgmail.Text = "";
                 txtweb.Text = "";
@@ -256,7 +256,7 @@ namespace Library_mng
                 tnn.Commit();
                 conn.Close();
                 Response.Write("<script>alert('Data inserted successfully')</script>");
-                
+
 
             }
 
@@ -270,6 +270,5 @@ namespace Library_mng
 
         }
 
-        
-    }
-}
+    } }
+    

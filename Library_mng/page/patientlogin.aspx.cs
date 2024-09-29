@@ -57,7 +57,7 @@ namespace Library_mng.page
                         }
 
 
-                        Response.Redirect("hospitalhome.aspx");
+                        Response.Redirect("patienthome.aspx");
 
 
 

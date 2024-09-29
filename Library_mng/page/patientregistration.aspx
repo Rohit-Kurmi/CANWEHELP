@@ -28,7 +28,7 @@
                     <div class="col-md-3 border border-muted pb-4 py-4" >
                         <div class="form-group">
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="Txtfn" class="form-control" placeholder="First Name" runat="server" onblur="return validateFname();"></asp:TextBox>
+                            <asp:TextBox ID="Txtfn" class="form-control" placeholder="First Name" runat="server"></asp:TextBox>
                         </div>
                     </div>
 

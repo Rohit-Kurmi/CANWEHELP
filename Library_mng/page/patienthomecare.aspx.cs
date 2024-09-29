@@ -96,8 +96,9 @@ namespace Library_mng.page
         protected void bind_hospital()
         {
             try {
+
                 cmd= new SqlCommand();
-                cmd.CommandText = "select * from tbl_hospitallogin_info";
+                cmd.CommandText = "select * from tbl_hospital_registration_info ";
 
                 ds = new DataSet();
                 ds = DB.get_data(cmd);
@@ -106,7 +107,7 @@ namespace Library_mng.page
                     ddhospital.DataSource = ds;
 
                     ddhospital.DataTextField = "hospital_name";
-                    ddhospital.DataValueField = "hoslogin_id";
+                    ddhospital.DataValueField = "hospital_id";
                     ddhospital.DataBind();
                     ddhospital.Items.Insert(0, new ListItem("select hospital", "0"));
 
@@ -157,9 +158,10 @@ namespace Library_mng.page
 
         protected void bind_city()
         {
-           
+
             try
             {
+
                 cmd = new SqlCommand();
                 cmd.CommandText = " select * from  [dbo].[tbl_city_info] where district_id=@district_id";
                 cmd.Parameters.AddWithValue("@district_id", dddistrict.SelectedValue);
@@ -211,6 +213,7 @@ namespace Library_mng.page
 
             try
             {
+
                 DateTime dob;
                 TimeSpan time;
                 int pid;
