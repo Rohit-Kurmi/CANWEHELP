@@ -145,7 +145,7 @@
                     <a class="nav-link active text-white" href="hospitalhome.aspx">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-white" href="hospitalhome.aspx">Profile</a>
+                    <a class="nav-link active text-white" href="hospitalprofile.aspx">Profile</a>
                 </li>
 
                 <!-- Doctor Link with Dropdown -->
