@@ -108,6 +108,22 @@
             float: right; /* Float icon to the right of the text */
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+
+        function addspeciality() {
+            $("#myModalspec").modal('show');
+        }
+
+        function addcheckup() {
+            $("#mymodalcheck").modal('show');
+        }
+
+
+    </script>
     <title></title>
 
     <asp:ContentPlaceHolder ID="head" runat="server">

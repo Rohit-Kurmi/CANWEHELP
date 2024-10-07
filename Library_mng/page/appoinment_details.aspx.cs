@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Reflection;
 
 namespace Library_mng.page
 {
@@ -31,10 +32,13 @@ namespace Library_mng.page
                 int hid = Convert.ToInt32(Session["user"]);
 
                 cmd = new SqlCommand();
-                cmd.CommandText = ("SELECT  distinct     dbo.tbl_patient_registration_info.fname, dbo.tbl_patient_registration_info.lname, dbo.tbl_patient_registration_info.dob," +
-                    " dbo.tbl_patient_registration_info.gender, dbo.tbl_patient_registration_info.email,dbo.tbl_patient_registration_info.phone_no, dbo.tbl_patient_registration_info.addres, " +
-                    "dbo.tbl_patient_registration_info.blood_group FROM            dbo.tbl_appointment_info INNER JOIN dbo.tbl_doctor_registration_info ON dbo.tbl_appointment_info.doc_id = dbo.tbl_doctor_registration_info.doc_id " +
-                    "INNER JOIN dbo.tbl_patient_registration_info ON dbo.tbl_appointment_info.patient_id = dbo.tbl_patient_registration_info.patinet_id  where hos_id =@hos_id");
+                cmd.CommandText = ("SELECT dbo.tbl_patient_registration_info.fname,dbo.tbl_patient_registration_info.lname,dbo.tbl_patient_registration_info.dob," +
+                    "dbo.tbl_patient_registration_info.gender,dbo.tbl_patient_registration_info.email,dbo.tbl_patient_registration_info.phone_no," +
+                    "dbo.tbl_patient_registration_info.addres,dbo.tbl_patient_registration_info.blood_group,tbl_speciality_info.speciality_name," +
+                    " dbo.tbl_appointment_info.problem_desc FROM dbo.tbl_appointment_info INNER JOIN dbo.tbl_doctor_registration_info ON " +
+                    "dbo.tbl_appointment_info.doc_id = dbo.tbl_doctor_registration_info.doc_id INNER JOIN dbo.tbl_patient_registration_info ON" +
+                    " dbo.tbl_appointment_info.patient_id = dbo.tbl_patient_registration_info.patinet_id inner join tbl_speciality_info on " +
+                    "tbl_speciality_info.speciality_id = dbo.tbl_appointment_info.specility_id WHERE hos_id = @hos_id");
                 cmd.Parameters.AddWithValue("@hos_id", hid);
                 ds = new DataSet();
                 ds = DB.get_data(cmd);

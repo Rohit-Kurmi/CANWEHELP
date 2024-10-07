@@ -341,6 +341,13 @@
     <Compile Include="page\patienttransport.aspx.designer.cs">
       <DependentUpon>patienttransport.aspx</DependentUpon>
     </Compile>
+    <Compile Include="page\patient_profile.aspx.cs">
+      <DependentUpon>patient_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\patient_profile.aspx.designer.cs">
+      <DependentUpon>patient_profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="page\Registrationpage.aspx.cs">
       <DependentUpon>Registrationpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -376,6 +383,20 @@
     <Compile Include="page\patientappoinment.aspx.designer.cs">
       <DependentUpon>patientappoinment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="page\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practice1.aspx.cs">
+      <DependentUpon>practice1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practice1.aspx.designer.cs">
+      <DependentUpon>practice1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -393,10 +414,13 @@
     <Content Include="page\patienthomecare.aspx" />
     <Content Include="page\patientlogin.aspx" />
     <Content Include="page\patienttransport.aspx" />
+    <Content Include="page\patient_profile.aspx" />
     <Content Include="page\Registrationpage.aspx" />
     <Content Include="page\service_process.aspx" />
     <Content Include="page\patientregistration.aspx" />
     <Content Include="page\patientappoinment.aspx" />
+    <Content Include="page\WebForm1.aspx" />
+    <Content Include="practice1.aspx" />
     <Content Include="web.config" />
     <Content Include="page\patient_home.Master" />
     <None Include="web.Debug.config">

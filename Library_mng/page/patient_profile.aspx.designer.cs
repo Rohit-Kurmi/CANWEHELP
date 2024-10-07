@@ -11,35 +11,35 @@ namespace Library_mng.page
 {
 
 
-    public partial class hospitalprofile
+    public partial class patient_profile
     {
 
         /// <summary>
-        /// lblNAME control.
+        /// lblFNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNAME;
+        protected global::System.Web.UI.WebControls.Label lblFNAME;
 
         /// <summary>
-        /// lblREG control.
+        /// lblLNAME control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblREG;
+        protected global::System.Web.UI.WebControls.Label lblLNAME;
 
         /// <summary>
-        /// lblWEB control.
+        /// lblDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWEB;
+        protected global::System.Web.UI.WebControls.Label lblDOB;
 
         /// <summary>
         /// lblGMAIL control.
@@ -51,13 +51,13 @@ namespace Library_mng.page
         protected global::System.Web.UI.WebControls.Label lblGMAIL;
 
         /// <summary>
-        /// lblTELE control.
+        /// lblGENDER control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTELE;
+        protected global::System.Web.UI.WebControls.Label lblGENDER;
 
         /// <summary>
         /// lblMNO control.
@@ -105,13 +105,13 @@ namespace Library_mng.page
         protected global::System.Web.UI.WebControls.Label lblADDRESS;
 
         /// <summary>
-        /// lblWH control.
+        /// lblBG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWH;
+        protected global::System.Web.UI.WebControls.Label lblBG;
 
         /// <summary>
         /// lblPINITAL control.
@@ -123,93 +123,30 @@ namespace Library_mng.page
         protected global::System.Web.UI.WebControls.Label lblPINITAL;
 
         /// <summary>
-        /// lblDOC control.
+        /// showAppoindment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDOC;
+        protected global::System.Web.UI.WebControls.GridView showAppoindment;
 
         /// <summary>
-        /// lblNUR control.
+        /// showhomecare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNUR;
+        protected global::System.Web.UI.WebControls.GridView showhomecare;
 
         /// <summary>
-        /// lblEMER control.
+        /// showcheckup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEMER;
-
-        /// <summary>
-        /// lblDISP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDISP;
-
-        /// <summary>
-        /// hosspeclist control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView hosspeclist;
-
-        /// <summary>
-        /// btnspeciality control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnspeciality;
-
-        /// <summary>
-        /// hoscheckuplist control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView hoscheckuplist;
-
-        /// <summary>
-        /// btncheckup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncheckup;
-
-        /// <summary>
-        /// ddspecility control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddspecility;
-
-        /// <summary>
-        /// ddcheckup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddcheckup;
+        protected global::System.Web.UI.WebControls.GridView showcheckup;
     }
 }

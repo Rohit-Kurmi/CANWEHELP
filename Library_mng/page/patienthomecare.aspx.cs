@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using Library_mng.AppCode;
 using System.Configuration;
 using System.Drawing;
+using System.Collections;
 
 namespace Library_mng.page
 {
@@ -18,6 +19,7 @@ namespace Library_mng.page
         DBconfig DB = new DBconfig();
         SqlCommand cmd = new SqlCommand();
         DataSet ds = new DataSet();
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -205,15 +207,15 @@ namespace Library_mng.page
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
-
+            int homecarid=0;
             SqlConnection con = new SqlConnection();
             con.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
             SqlTransaction tnn=null;
             con.Open();
-
+            
             try
             {
-
+               
                 DateTime dob;
                 TimeSpan time;
                 int pid;
@@ -256,6 +258,50 @@ namespace Library_mng.page
                 cmd.Parameters.AddWithValue("@services", ddservices.Text.Trim());
 
                 cmd.ExecuteNonQuery();
+
+                
+                string query;
+                query = "select * from tbl_homecare_info where patient_id=@patient_id and hospital_id=@hospital_id and from_data=@from_data and " +
+                    "how_many_days=@how_many_days and problem_description=@problem_description and address=@address and pincode=@pincode and services=@services";
+                
+                using(SqlCommand cmd = new SqlCommand(query, con,tnn))
+                { 
+                cmd.Parameters.AddWithValue("@hospital_id", ddhospital.SelectedValue);
+                cmd.Parameters.AddWithValue("@patient_id", pid);
+                cmd.Parameters.AddWithValue("@from_data", dob);
+                cmd.Parameters.AddWithValue("@how_many_days", txtday.Text.Trim());
+                cmd.Parameters.AddWithValue("@problem_description", txtmsg.Text.Trim());
+                cmd.Parameters.AddWithValue("@address", txtaddress.Text.Trim());
+                cmd.Parameters.AddWithValue("@pincode", txtpin.Text.Trim());
+                cmd.Parameters.AddWithValue("@services", ddservices.Text.Trim());
+
+                    // Execute the select query and fill the dataset
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        // Get the appointment ID and store it in the appoi variable
+                        homecarid = Convert.ToInt32(ds.Tables[0].Rows[0]["homecar_id"]);
+                    }
+
+                }
+
+                if(homecarid > 0)
+                {
+                    query = "insert into tbl_homecare_status (homecare_id,hos_id,status) values(@homecare_id,@hos_id,@status)";
+
+                    using(SqlCommand cmd = new SqlCommand(query, con, tnn))
+                    {
+                        cmd.Parameters.AddWithValue("@homecare_id", homecarid);
+                        cmd.Parameters.AddWithValue("@hos_id", ddhospital.SelectedValue);  // Assuming hos_id is the same as patient_id
+                        cmd.Parameters.AddWithValue("@status", "Pending");
+                        cmd.ExecuteNonQuery();
+                    }
+
+                }
+
+
 
                 ddservices.Text = "";
                 txtpin.Text = "";

@@ -6,17 +6,49 @@
 
     <form runat="server">
 
-        <div class="container-fluid" style="margin-top: 100px">
+        <div class="" style="margin-top: 100px">
 
            
-            <div class="box" style="box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.7); padding: 30px; margin-top: 20px; margin-bottom: 20px; margin-left: 0px; margin-right: 0px;">
+            <div class="box" style="box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.7); padding: 10px; margin-top: 20px; margin-bottom: 20px; margin-left: 0px; margin-right: 0px;">
 
                 <label runat="server"><b>Patient homecare request</b></label>
 
-                <asp:gridview ID="home_care_details" runat="server" AutoGenerateColumns="true" CssClass="table table-striped table-bordered table-hover "
-                    Font-Name="Verdana" Font-Size="8pt" ShowHeaderWhenEmpty="True">
+<asp:GridView ID="home_care_details" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover"
+    Font-Name="Verdana" Font-Size="7pt" ShowHeaderWhenEmpty="True" DataKeyNames="homecar_id">
 
-                </asp:gridview>
+    <Columns>
+        <asp:TemplateField HeaderText="S No." HeaderStyle-Width="5%" HeaderStyle-HorizontalAlign="Left">
+            <ItemTemplate>
+                <%# Container.DataItemIndex + 1 %>
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:BoundField DataField="fname" HeaderText="FIRST NAME" />
+        <asp:BoundField DataField="lname" HeaderText="LAST NAME" />
+        <asp:BoundField DataField="email" HeaderText="GEMAIL_ID" />
+        <asp:BoundField DataField="phone_no" HeaderText="CONTACT_NO" />
+        <asp:BoundField DataField="speciality_name" HeaderText="SPECILITY_TYPE" />
+        <asp:BoundField DataField="problem_description" HeaderText="PROBLEM" />
+        <asp:BoundField DataField="from_data" HeaderText="FROM_DATE" />
+        <asp:BoundField DataField="from_time" HeaderText="FROM_TIME" />
+        <asp:BoundField DataField="to_tmie" HeaderText="TO_TIME" />
+        <asp:BoundField DataField="how_many_days" HeaderText="DAYS" />
+
+     <asp:BoundField DataField="homecar_id" HeaderText="Appointment ID" Visible="false" />
+
+        
+        <asp:TemplateField HeaderText="PERMISSION">
+            <ItemTemplate>
+                 <asp:RadioButton ID="approve" Text="APPROVE" runat="server" GroupName="SelectGroup_<%# Container.DataItemIndex %>" 
+                    AutoPostBack="true" OnCheckedChanged="approve_CheckedChanged" />
+                <asp:RadioButton ID="decline" Text="DECLINE" runat="server" GroupName="SelectGroup_<%# Container.DataItemIndex %>" 
+                    AutoPostBack="true" OnCheckedChanged="approve_CheckedChanged" />
+            </ItemTemplate>
+        </asp:TemplateField>
+
+      
+       
+    </Columns>
+</asp:GridView>
 
             </div>
 

@@ -132,7 +132,7 @@
                     <a class="nav-link active text-white" href="patienthome.aspx">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Profile</a>
+                    <a class="nav-link text-white" href="patient_profile.aspx">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="patientappoinment.aspx">Take Appointment</a>

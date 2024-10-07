@@ -45,6 +45,7 @@ namespace Library_mng.AppCode
             ds = new DataSet();
             dbconnection.Open();
             cmd.Connection = dbconnection;
+            adapter=new SqlDataAdapter();
             adapter.SelectCommand = cmd;
             adapter.Fill(ds);
             dbconnection.Close();
