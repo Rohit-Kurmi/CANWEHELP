@@ -85,6 +85,7 @@ namespace Library_mng.page
 
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
+            int hechid = 0;
             SqlConnection conn = new SqlConnection();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
             SqlTransaction tnn = null;
@@ -92,6 +93,7 @@ namespace Library_mng.page
 
             try
             {
+                string query = "";
                 DateTime dob;
                 TimeSpan time;
                 int pid;
@@ -125,6 +127,42 @@ namespace Library_mng.page
                 cmd.Parameters.AddWithValue("@hospital", ddhospital.SelectedValue);
 
                 cmd.ExecuteNonQuery();
+
+                query = "select * from tbl_healthcheckup_info where patient_id=@patient_id and checkup_date=checkup_date and time=@time and problem_type=@problem_type" +
+                    " and problem_desc=@problem_desc and hospital=@hospital";
+                using(SqlCommand cmd =new SqlCommand(query,conn,tnn))
+                {
+                    cmd.Parameters.AddWithValue("@patient_id", pid);
+                    cmd.Parameters.AddWithValue("@checkup_date", dob);
+                    cmd.Parameters.AddWithValue("@time", time);
+                    cmd.Parameters.AddWithValue("@problem_type", ddpro.Text.Trim());
+                    cmd.Parameters.AddWithValue("@problem_desc", txtmsg.Text.Trim());
+                    cmd.Parameters.AddWithValue("@hospital", ddhospital.SelectedValue);
+
+
+                    // Execute the select query and fill the dataset
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        // Get the appointment ID and store it in the appoi variable
+                        hechid = Convert.ToInt32(ds.Tables[0].Rows[0]["healthcheck_id"]);
+                    }
+
+                    if (hechid > 0)
+                    {
+                        query = "insert into tbl_healthchek_status (healthcheckup_id,hos_id,status) values (@healthcheckup_id,@hos_id,@status)";
+                        using (SqlCommand cm = new SqlCommand(query, conn, tnn))
+                        { 
+                            cm.Parameters.AddWithValue("@healthcheckup_id", hechid);
+                        cm.Parameters.AddWithValue("@hos_id", ddhospital.SelectedValue);
+                        cm.Parameters.AddWithValue("@status", "Pending");
+                        cm.ExecuteNonQuery();
+                        }
+                    }
+
+                }
 
                 ddpro.Text = "";
                 txtmsg.Text = "";

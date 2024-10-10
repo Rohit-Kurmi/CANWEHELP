@@ -14,7 +14,7 @@
                 <label runat="server"><b>Patient homecare request</b></label>
 
 <asp:GridView ID="home_care_details" runat="server" AutoGenerateColumns="false" CssClass="table table-striped table-bordered table-hover"
-    Font-Name="Verdana" Font-Size="7pt" ShowHeaderWhenEmpty="True" DataKeyNames="homecar_id">
+    Font-Name="Verdana" Font-Size="7pt" ShowHeaderWhenEmpty="True" DataKeyNames="homecar_id" Width="1278px">
 
     <Columns>
         <asp:TemplateField HeaderText="S No." HeaderStyle-Width="5%" HeaderStyle-HorizontalAlign="Left">
@@ -24,7 +24,7 @@
         </asp:TemplateField>
         <asp:BoundField DataField="fname" HeaderText="FIRST NAME" />
         <asp:BoundField DataField="lname" HeaderText="LAST NAME" />
-        <asp:BoundField DataField="email" HeaderText="GEMAIL_ID" />
+        
         <asp:BoundField DataField="phone_no" HeaderText="CONTACT_NO" />
         <asp:BoundField DataField="speciality_name" HeaderText="SPECILITY_TYPE" />
         <asp:BoundField DataField="problem_description" HeaderText="PROBLEM" />
@@ -32,6 +32,7 @@
         <asp:BoundField DataField="from_time" HeaderText="FROM_TIME" />
         <asp:BoundField DataField="to_tmie" HeaderText="TO_TIME" />
         <asp:BoundField DataField="how_many_days" HeaderText="DAYS" />
+        <asp:BoundField DataField="status" HeaderText="STATUS" />
 
      <asp:BoundField DataField="homecar_id" HeaderText="Appointment ID" Visible="false" />
 

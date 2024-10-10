@@ -20,7 +20,7 @@ namespace Library_mng.page
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack) 
+            if (!IsPostBack)
             {
                 Bind_home_care();
             }
@@ -34,15 +34,13 @@ namespace Library_mng.page
                 int hid = Convert.ToInt32(Session["user"]);
                 cmd = new SqlCommand();
 
-                cmd.CommandText = "SELECT tbl_patient_registration_info.fname, tbl_patient_registration_info.lname, tbl_patient_registration_info.email, " +
-                                  "tbl_patient_registration_info.phone_no, [dbo].[tbl_speciality_info].speciality_name, tbl_homecare_info.problem_type, " +
-                                  "tbl_homecare_info.problem_description, tbl_homecare_info.from_data, tbl_homecare_info.from_time, " +
-                                  "tbl_homecare_info.to_tmie, tbl_homecare_info.how_many_days, tbl_homecare_info.homecar_id " +
-                                  "FROM tbl_homecare_info " +
-                                  "INNER JOIN tbl_patient_registration_info ON tbl_patient_registration_info.patinet_id = tbl_homecare_info.patient_id " +
-                                  "INNER JOIN [dbo].[tbl_speciality_info] ON [dbo].[tbl_speciality_info].speciality_id = tbl_homecare_info.specility_id " +
-                                  "LEFT JOIN tbl_homecare_status ON tbl_homecare_info.homecar_id = tbl_homecare_status.homecare_id " +
-                                  "WHERE tbl_homecare_status.homecare_id IS NULL AND hospital_id = @hos_id"; // Exclude processed records
+                cmd.CommandText = "select  HI.homecar_id ,PR.fname, PR.lname, PR.phone_no, SI.speciality_name, HI.problem_type, HI.problem_description, HI.from_data, " +
+                    "HI.from_time,HI.to_tmie, HI.how_many_days,HS.status FROM tbl_homecare_info as HI INNER JOIN tbl_patient_registration_info as PR ON PR.patinet_id =" +
+                    " HI.patient_id  INNER JOIN [dbo].[tbl_speciality_info] as SI ON SI.speciality_id = HI.specility_id  LEFT JOIN tbl_homecare_status as HS ON HI.homecar_id =" +
+                    " HS.homecare_id  WHERE hospital_id = 25 and status='pending'select  HI.homecar_id ,PR.fname, PR.lname,  PR.phone_no, SI.speciality_name, HI.problem_type," +
+                    " HI.problem_description, HI.from_data, HI.from_time,  HI.to_tmie, HI.how_many_days,HS.status FROM tbl_homecare_info as HI INNER JOIN " +
+                    "tbl_patient_registration_info as PR ON PR.patinet_id = HI.patient_id  INNER JOIN [dbo].[tbl_speciality_info] as SI ON SI.speciality_id =" +
+                    " HI.specility_id  LEFT JOIN tbl_homecare_status as HS ON HI.homecar_id = HS.homecare_id  WHERE hospital_id = 25 and status='pending'";
 
                 cmd.Parameters.AddWithValue("@hos_id", hid);
 
@@ -60,62 +58,33 @@ namespace Library_mng.page
 
         protected void approve_CheckedChanged(object sender, EventArgs e)
         {
+
             try
             {
-                int hid = Convert.ToInt32(Session["user"]);
+                RadioButton rb = (RadioButton)sender;
+                GridViewRow row = (GridViewRow)rb.NamingContainer;
 
-                // Get the current GridViewRow
-                GridViewRow row = (GridViewRow)((RadioButton)sender).NamingContainer;
-
-                // Find the RadioButtons in the current row
-                RadioButton approve = (RadioButton)row.FindControl("approve");
-                RadioButton decline = (RadioButton)row.FindControl("decline");
-
-                // Find the TextBox (Date Picker) in the current row
-               
-
-                // Get the hidden homecare_id (appointment_id)
-                string homecare_id = home_care_details.DataKeys[row.RowIndex].Value.ToString();
-
-                // Variable to store selected status
-                string status = "";
-
-                // Check which RadioButton is selected
-                if (approve != null && approve.Checked)
+                if (row != null && row.RowIndex >= 0 && row.RowIndex < home_care_details.Rows.Count)
                 {
-                    status = "APPROVE";
+                    int homecare_id = Convert.ToInt32(home_care_details.DataKeys[row.RowIndex].Value);
+                    string newStatus = rb.Text == "APPROVE" ? "Approved" : "Declined";
+
+                    // Update the database status based on the selected option
+                    cmd = new SqlCommand();
+                    cmd.CommandText = "UPDATE [dbo].[tbl_homecare_status] SET status=@status , apporval_date=GETDATE() WHERE homecare_id=@homecar_id";
+                    cmd.Parameters.AddWithValue("@status", newStatus);
+                    cmd.Parameters.AddWithValue("@homecar_id", homecare_id);
+
+
+                    DB.insert_update_delet(cmd); // Execute the update query
+
+                    // Refresh the GridView after the update
+                    Bind_home_care();
                 }
-                else if (decline != null && decline.Checked)
-                {
-                    status = "DECLINE";
-                }
-
-                // Get the selected date
-                DateTime approvalDate;
-
-                // Insert the data into the database
-                cmd = new SqlCommand();
-                cmd.CommandText = "INSERT INTO tbl_homecare_status(homecare_id, hos_id, status, apporval_date) VALUES " +
-                                  "(@homecare_id, @hos_id, @status)";  // Corrected here
-
-                cmd.Parameters.AddWithValue("@homecare_id", homecare_id);
-                cmd.Parameters.AddWithValue("@hos_id", hid);
-                cmd.Parameters.AddWithValue("@status", status);
-
-                // Make sure to add the approval date parameter only if it's valid
-              
-
-                // Execute the SQL command
-                DB.insert_update_delet(cmd);
-
-                approve.Checked = false;
-                decline.Checked = false;
-
             }
-
             catch (Exception ex)
             {
-                Response.Write("<script>alert('exception related  insert data in homcare status: " + ex.Message + "')</script>");
+                Response.Write("<script>alert('Error updating status: " + ex.Message + "')</script>");
             }
         }
     }

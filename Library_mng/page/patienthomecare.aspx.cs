@@ -294,7 +294,7 @@ namespace Library_mng.page
                     using(SqlCommand cmd = new SqlCommand(query, con, tnn))
                     {
                         cmd.Parameters.AddWithValue("@homecare_id", homecarid);
-                        cmd.Parameters.AddWithValue("@hos_id", ddhospital.SelectedValue);  // Assuming hos_id is the same as patient_id
+                        cmd.Parameters.AddWithValue("@hos_id", ddhospital.SelectedValue);
                         cmd.Parameters.AddWithValue("@status", "Pending");
                         cmd.ExecuteNonQuery();
                     }

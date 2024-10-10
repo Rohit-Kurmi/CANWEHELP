@@ -15,7 +15,7 @@
 
     <title> Patient Login</title>
 </head>
-  <body style="background-color: #4b3efe; background-image:url('../images/bg_5.jpg')" >
+  <body style=" background-image:url('../images/bg_5.jpg');" >
      
       
 
