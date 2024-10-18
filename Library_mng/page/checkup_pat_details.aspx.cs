@@ -33,7 +33,12 @@ namespace Library_mng.page
             {
                 int hid = Convert.ToInt32(Session["user"]);
                 cmd = new SqlCommand();
-                cmd.CommandText = "select distinct tbl_patient_registration_info.fname, tbl_patient_registration_info.lname, tbl_patient_registration_info.email, tbl_patient_registration_info.phone_no,[dbo].[tbl_checkup_info].checkup_name,[dbo].[tbl_healthcheckup_info].problem_type,[dbo].[tbl_healthcheckup_info].problem_desc,[dbo].[tbl_healthcheckup_info].checkup_date from[dbo].[tbl_healthcheckup_info]inner join tbl_patient_registration_info on tbl_patient_registration_info.patinet_id = [dbo].[tbl_healthcheckup_info].patient_id inner join[dbo].[tbl_checkup_info] on[dbo].[tbl_checkup_info].checkup_id = [dbo].[tbl_healthcheckup_info].checkup_id where hospital = @hos";
+                cmd.CommandText = "select distinct tbl_patient_registration_info.fname, tbl_patient_registration_info.lname," +
+                    " tbl_patient_registration_info.email, tbl_patient_registration_info.phone_no,[dbo].[tbl_checkup_info].checkup_name," +
+                    "[dbo].[tbl_healthcheckup_info].problem_type,[dbo].[tbl_healthcheckup_info].problem_desc,[dbo].[tbl_healthcheckup_info]" +
+                    ".checkup_date from[dbo].[tbl_healthcheckup_info] inner join tbl_patient_registration_info on tbl_patient_registration_info." +
+                    "patinet_id = [dbo].[tbl_healthcheckup_info].patient_id inner join[dbo].[tbl_checkup_info] on[dbo].[tbl_checkup_info]." +
+                    "checkup_id = [dbo].[tbl_healthcheckup_info].checkup_id where hospital = @hos";
                 cmd.Parameters.AddWithValue("@hos", hid);
 
                 ds = new DataSet();

@@ -204,6 +204,15 @@ namespace Library_mng.page
         protected global::System.Web.UI.WebControls.DropDownList ddspecility;
 
         /// <summary>
+        /// btnaddspecility control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnaddspecility;
+
+        /// <summary>
         /// ddcheckup control.
         /// </summary>
         /// <remarks>
@@ -211,5 +220,14 @@ namespace Library_mng.page
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddcheckup;
+
+        /// <summary>
+        /// btnaddcheckup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnaddcheckup;
     }
 }

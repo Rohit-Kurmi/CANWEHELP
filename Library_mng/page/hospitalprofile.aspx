@@ -163,16 +163,10 @@
 
         <!-- Trigger the modal with a button -->
 
-           <div class="modal fade" id="myModalspec" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" >&times;</button>
-                    <h4 class="modal-title">Add Speciality</h4>
-                </div>
-
-                <div class="modal-body">
+                <div style="margin-bottom:30px;">
+                  
+                    <h4 >Add Speciality</h4>
+                
                     <div>
 
                         <asp:DropDownList ID="ddspecility" runat="server" CssClass="form-control" AutoPostBack="true">
@@ -182,25 +176,20 @@
                     </div>
 
 
-                </div>
+               
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
 
-                    <button type="submit" class="btn btn-info" >Add</button>
+                    <asp:button ID="btnaddspecility" runat="server" type="submit" Text="ADD" class="btn btn-info" OnClick="btnaddspecility_Click" />
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="modal fade" id="myModalcheck" role="dialog" >
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add Checkup</h4>
-                </div>
 
-                <div class="modal-body">
+
+                <div style="margin-bottom:30px;">       
+                    <h4>Add Checkup</h4>
+               
+
+                
                     <div>
 
                         <asp:DropDownList ID="ddcheckup" runat="server" CssClass="form-control" AutoPostBack="true">
@@ -210,15 +199,14 @@
                     </div>
 
 
-                </div>
+                
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
 
-                    <button type="submit" class="btn btn-info" >Add</button>
+                    <asp:button ID="btnaddcheckup" runat="server" Text="ADD" type="submit" class="btn btn-info"  OnClick="btnaddcheckup_Click"  />
                 </div>
             </div>
-        </div>
-    </div>
+   
     </form>
  
 

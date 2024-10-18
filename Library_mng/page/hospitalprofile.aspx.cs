@@ -118,8 +118,7 @@ namespace Library_mng.page
            
             try
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "addcheckup()", true);
-
+               
                 cmd = new SqlCommand();
                 cmd.CommandText = "select * from tbl_checkup_info";
 
@@ -144,40 +143,77 @@ namespace Library_mng.page
 
         }
 
+        protected void btnaddcheckup_Click(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+
+                SqlConnection conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
+                conn.Open();
+
+                cmd = new SqlCommand();
+                cmd.Connection = conn;
+                int hid = Convert.ToInt32(Session["user"]);
+                cmd.CommandText = "insert into tbl_hos_check_info(hospital_id,checkup_id) values (@hos_id,@checkup_id)";
+                cmd.Parameters.AddWithValue("@hos_id", hid);
+                cmd.Parameters.AddWithValue("@checkup_id", ddcheckup.SelectedValue);
+                cmd.ExecuteNonQuery();
+
+                ddcheckup.SelectedValue = "0";
+                conn.Close();
+
+            }
+
+            catch (Exception ex)
+            {
+
+                Response.Write("<script>alert('error related to profile insert specility list' )</script>");
+
+            }
+        }
+
+
+
+
         protected void btnspeciality_Click(object sender, EventArgs e)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "CallMyFunction", "addspeciality()", true);
 
-            //try
-            //{
-               
-            //    cmd = new SqlCommand();
-            //    cmd.CommandText = "select * from tbl_speciality_info";
+           try
+           {
+            
+               cmd = new SqlCommand();
+               cmd.CommandText = "select * from tbl_speciality_info";
 
-            //    ds = new DataSet();
-            //    ds = DB.get_data(cmd);
+               ds = new DataSet();
+               ds = DB.get_data(cmd);
 
-            //    if (ds.Tables[0].Rows.Count > 0)
-            //    {
-            //        ddspecility.DataSource = ds;
-            //        ddspecility.DataTextField = "speciality_name";
-            //        ddspecility.DataValueField = "speciality_id";
-            //        ddspecility.DataBind();
-            //        ddspecility.Items.Insert(0, new ListItem("<----select specility---->", "0"));
-            //    }
+               if (ds.Tables[0].Rows.Count > 0)
+               {
+                   ddspecility.DataSource = ds;
+                   ddspecility.DataTextField = "speciality_name";
+                   ddspecility.DataValueField = "speciality_id";
+                   ddspecility.DataBind();
+                   ddspecility.Items.Insert(0, new ListItem("<----select specility---->", "0"));
+               }
 
-            //}
+           }
 
-            //catch (Exception ex)
-            //{
-            //    Response.Write("<script>alert('error related to profile add specility list' )</script>");
-            //}
+           catch (Exception ex)
+           {
+               Response.Write("<script>alert('error related to profile add specility list' )</script>");
+           }
 
 
 
         }
 
-        protected void addspecility_Click(object sender, EventArgs e)
+       
+
+        protected void btnaddspecility_Click(object sender, EventArgs e)
         {
             try
             {
@@ -207,36 +243,6 @@ namespace Library_mng.page
 
         }
 
-        protected void addcheckup_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["dbstring"].ConnectionString;
-                conn.Open();
-
-                cmd = new SqlCommand();
-                cmd.Connection = conn;
-                int hid = Convert.ToInt32(Session["user"]);
-                cmd.CommandText = "insert into tbl_hos_check_info(hospital_id,checkup_id) values (@hos_id,@checkup_id)";
-                cmd.Parameters.AddWithValue("@hos_id", hid);
-                cmd.Parameters.AddWithValue("@checkup_id", ddcheckup.SelectedValue);
-                cmd.ExecuteNonQuery();
-
-                ddcheckup.SelectedValue = "0";
-                conn.Close();
-
-            }
-
-            catch (Exception ex)
-            {
-
-                Response.Write("<script>alert('error related to profile insert specility list' )</script>");
-
-            }
-
-        }
+       
     }
 }
