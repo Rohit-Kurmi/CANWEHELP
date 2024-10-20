@@ -10,81 +10,76 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
  <style>
-     /* Full-height sidebar styling */
+     
      .sidebar {
          position: fixed;
-         top: 56px; /* Height of the navbar */
-         left: -250px; /* Initially hidden (moved out of the view) */
+         top: 56px; 
+         left: -250px; 
          width: 250px;
-         height: calc(100vh - 56px); /* Full viewport height minus navbar height */
+         height: calc(100vh - 56px);
          background-color: #343a40;
          overflow: hidden;
          padding: 15px;
-         z-index: 1000; /* Ensure it stays above other content */
-         transition: left 0.3s ease; /* Slide effect */
+         z-index: 1000; 
+         transition: left 0.3s ease; 
      }
 
-         /* When sidebar is toggled, it slides in */
          .sidebar.show {
-             left: 0; /* Move into view */
+             left: 0; 
          }
 
-     /* Main content container to slide with the sidebar */
      .content {
-         transition: margin-left 0.3s ease; /* Smooth slide effect */
+         transition: margin-left 0.3s ease; 
          margin-left: 0;
          padding: 20px;
      }
 
          .content.shifted {
-             margin-left: 250px; /* Shift content when sidebar is shown */
+             margin-left: 250px;
          }
 
      .sidebar-content {
          color: white;
      }
 
-     /* Aligning the toggle button next to the logo */
      .navbar-brand {
          display: flex;
          align-items: center;
      }
 
      .toggle-btn {
-         margin-left: 30px; /* Add space between logo and button */
+         margin-left: 30px; 
      }
 
-     /* White Point bullet in front of sidebar nav-links */
      .sidebar .nav-link {
          color: white !important;
          position: relative;
-         padding-left: 25px; /* Space for bullet */
+         padding-left: 25px;
      }
 
          .sidebar .nav-link::before {
-             content: "\25C9"; /* Unicode for ⦿ (White Point Bullet) */
+             content: "\25C9"; 
              position: absolute;
              left: 0;
              top: 50%;
              transform: translateY(-50%);
-             color: white; /* White bullet */
+             color: white; 
          }
 
-     /* Right aligned logout button */
      .navbar-nav {
-         margin-left: auto; /* Pushes the logout button to the right */
+         margin-left: auto;
      }
 
      .logout-btn {
          color: white;
-         margin-left: 20px; /* Space between buttons */
+         margin-left: 20px; 
      }
 
      .navbar-brand {
          margin-left: 20px;
      }
 
-     /* Footer Styling */
+    
      .footer {
          background-color: #343a40;
          color: white;
@@ -154,11 +149,10 @@
         </div>
     </div>
 
-    <!-- Main content that will slide along with sidebar -->
+    
     <div class="content" id="mainContent">
         
 
-    <!-- JavaScript to Toggle Sidebar and Slide Content -->
     <script>
         document.getElementById('toggleSidebar').addEventListener('click', function () {
             var sidebar = document.getElementById('sidebar');
@@ -172,7 +166,7 @@
         </asp:ContentPlaceHolder>
 
          </div>
-    <!-- Footer -->
+ 
     
     <div class="footer">
         Copyright ©2024 All rights reserved - CanWeHelp

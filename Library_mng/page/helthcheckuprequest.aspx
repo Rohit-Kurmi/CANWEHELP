@@ -4,7 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
-        <h4 style="margin-top: 100px;margin-left:15px "><b>Health Care Request</b></h4>
+        
+         <div class="container-fluid" style="margin-top: 80px; background-color:lightblue; ">
+     <div class="row">
+         <div class="col-12">
+             <header>
+                 <h4>Patient HealthCare Request</h4>
+             </header>
+         </div>
+     </div>
+     </div>
+
         <div class="container-fluid" >
 
             <div class="box" style="box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.7); padding: 30px; margin-top: 20px; margin-bottom: 20px; margin-left: 0px; margin-right: 0px;">

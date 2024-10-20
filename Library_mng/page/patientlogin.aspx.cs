@@ -79,7 +79,7 @@ namespace Library_mng.page
 
             catch (Exception ex)
             {
-                Response.Write("<script>alert('Something  is wrong........!')</script>");
+                Response.Write("<script>alert('error in patient password reseting')</script>");
             }
 
         }

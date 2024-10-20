@@ -92,6 +92,8 @@
     <Content Include="page\checkup_pat_details.aspx" />
     <Content Include="page\details_patient_homecare.aspx" />
     <Content Include="page\doctorregistration.aspx" />
+    <Content Include="page\forget_hosp_password.aspx" />
+    <Content Include="page\forget_password.aspx" />
     <Content Include="page\helthcheckuprequest.aspx" />
     <Content Include="page\hospitalhome.aspx" />
     <Content Include="page\hospitalpatientreg.aspx" />
@@ -214,6 +216,20 @@
     </Compile>
     <Compile Include="page\doctorregistration.aspx.designer.cs">
       <DependentUpon>doctorregistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\forget_hosp_password.aspx.cs">
+      <DependentUpon>forget_hosp_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\forget_hosp_password.aspx.designer.cs">
+      <DependentUpon>forget_hosp_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\forget_password.aspx.cs">
+      <DependentUpon>forget_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\forget_password.aspx.designer.cs">
+      <DependentUpon>forget_password.aspx</DependentUpon>
     </Compile>
     <Compile Include="page\helthcheckuprequest.aspx.cs">
       <DependentUpon>helthcheckuprequest.aspx</DependentUpon>

@@ -1,189 +1,120 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.master.cs" Inherits="Library_mng.page.masterpage" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
-     <link href="../css/default.css" rel="stylesheet" />
- 
-
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="../css/default.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body>
- 
 
-                            <!--start nav-->
+    <!-- Start of Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg bg-primary navbar-primary sticky-top" style="color: white">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span style="color:white">Menu</span>
+            </button>
+            <a href="#" class="btn btn-warning py-2 px-3 order-lg-last ml-3">Enquiry</a>
+            <a href="login1.aspx" class="btn btn-warning py-2 px-3 order-lg-last mr-3">Login</a>
 
-
-<nav class="navbar navbar-expand-lg bg-primary navbar-primary " style="color: white">
-
-    <div class="container ">
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span style="color:white">Menu</span>
-        </button>
-
-        <a href="#" class="btn btn-warning py-2 px-3 button-custom order-lg-last ml-3">Enquiry</a>
-        <a href="login1.aspx" class="btn btn-warning py-2 px-3  button-custom order-lg-last mr-3  ">Login</a>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item"><a href="default.aspx" class="nav-link pl-0" style="color: white">Home</a></li>
-                <li class="nav-item"><a href="service_process.aspx" class="nav-link" style="color: white">Service Process</a></li>
-                <li class="nav-item"><a href="Ourteam.aspx" class="nav-link" style="color: white">OurTeam</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="color: white">Speciality</a></li>
-                <li class="nav-item"><a href="gallery.aspx" class="nav-link" style="color: white">Gallery</a></li>
-                <li class="nav-item"><a href="Registrationpage.aspx" class="nav-link" style="color: white">Registration</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
-
-
-
-
-<!------------below to navbar------------>
-
-<nav class="navbar py-4 navbar-expand-lg  bg-white flex-row">
-     <div class="container">
-         <div class="row">
-             <div class="col-lg-3 mb-3">
-                <a><img src="../images/logo.jpg"  style="height: 80px; width: 90px;" /></a>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="default.aspx" class="nav-link pl-0" style="color: white">Home</a></li>
+                    <li class="nav-item"><a href="service_process.aspx" class="nav-link" style="color: white">Service Process</a></li>
+                    <li class="nav-item"><a href="Ourteam.aspx" class="nav-link" style="color: white">Our Team</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="specialityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white">Speciality</a>
+                        <ul class="dropdown-menu" aria-labelledby="specialityDropdown">
+                            <li><a class="dropdown-item" href="#">Speciality 1</a></li>
+                            <li><a class="dropdown-item" href="#">Speciality 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="gallery.aspx" class="nav-link" style="color: white">Gallery</a></li>
+                    <li class="nav-item"><a href="Registrationpage.aspx" class="nav-link" style="color: white">Registration</a></li>
+                </ul>
             </div>
-
-             <div class="col-lg-3 mb-3">
-
-                <img src="../images/loc.png"  style="height:30px ;width:30px"><span>Address:16-18 Saraswati Nagar, Infront of Hanuman Mandir, Jawahar chowk bhopal (462003)</span>
-             </div>
-
-             <div class="col-lg-3 mb-3">
-                   <span">Email: support@canwehelp.in</span>
-
-              </div>
-               <div class="col-lg-3 mb-3">
-                   <i class="fa-solid fa-phone"><span>Phone: +91 (0755) 4924976</span></i>
-                </div>
-
         </div>
-    </div>
-</nav>
+    </nav>
 
+    <!-- Below the Navbar -->
+    <nav class="navbar py-4 navbar-expand-lg bg-white flex-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-3">
+                    <a href="#"><img src="../images/logo.jpg" alt="Company Logo" style="height: 80px; width: auto;" /></a>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <img src="../images/loc.png" alt="Location Icon" style="height:30px; width:30px">
+                    <span>Address: 16-18 Saraswati Nagar, Infront of Hanuman Mandir, Jawahar Chowk Bhopal (462003)</span>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <span>Email: support@canwehelp.in</span>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Phone: +91 (0755) 4924976</span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-           
-
-            </asp:ContentPlaceHolder>
-
-            
-                
-    <!--Footer start-->
-
-    <footer class="bg-dark" style="color: white">
-        <div class="container ">
-            <div class="row ">
+    <!-- Footer Start -->
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-4 mt-4">
                     <h4 id="canwe">CanWe<span id="help">Help</span></h4>
-                    <br />
-                    <p>We Provide personalized and professional home health care services in India to allow quick and convenient recovery within the comfort of one's home. Some of the key medical services offered include setting up ICU atHOME, providing Cancer Care atHOME, nursing care, physiotherapy services.</p>
-                    <br />
-                    <h4>Have a Questions?</h4>
-                    <br />
-
-
-                    <p>Address: 16-18 Saraswati Nagar, Infront of Hanuman Mandir, Jawahar chowk bhopal (462003)</p>
-                    <br />
+                    <p>We provide personalized and professional home health care services in India for quick recovery within the comfort of your home.</p>
+                    <h4>Have Questions?</h4>
+                    <p>Address: 16-18 Saraswati Nagar, Infront of Hanuman Mandir, Jawahar Chowk Bhopal (462003)</p>
                     <p>Phone: +91 (0755) 4924976</p>
-                    <br />
-                    <p>support@canwehelp.in</p>
-
+                    <p>Email: support@canwehelp.in</p>
                 </div>
-
-                <br>
-                <br />
-
-
 
                 <div class="col-lg-4 mt-4">
-
-                    <h4>Links</h4>
-
-                    <br />
+                    <h4>Quick Links</h4>
                     <ul class="list-unstyled">
-                        <li><a class="tremove" href="#" style="color: white">&#8594  Home</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 Services process</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 OurTeam</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 Services</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 Gallery</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 Regiatration</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 Login</a></li>
-                        <li><a class="tremove" href="#" style="color: white">&#8594 Enquiry</a></li>
-
+                        <li><a class="text-white" href="#">&#8594 Home</a></li>
+                        <li><a class="text-white" href="#">&#8594 Service Process</a></li>
+                        <li><a class="text-white" href="#">&#8594 Our Team</a></li>
+                        <li><a class="text-white" href="#">&#8594 Services</a></li>
+                        <li><a class="text-white" href="#">&#8594 Gallery</a></li>
+                        <li><a class="text-white" href="#">&#8594 Registration</a></li>
+                        <li><a class="text-white" href="#">&#8594 Login</a></li>
+                        <li><a class="text-white" href="#">&#8594 Enquiry</a></li>
                     </ul>
                 </div>
-                <br>
-                <br />
 
                 <div class="col-lg-4 mt-4">
                     <h4>Opening Hours</h4>
-                    <br />
-                    <br />
-                    <h6 class="fa-regular fa-clock ">We are open 24/7</h6>
-                    <br />
-                    <br />
+                    <h6>We are open 24/7</h6>
+                    <h4>Subscribe to Us!</h4>
+                    <div class="form-group">
+                        <input type="email" class="form-control mb-2" id="email" placeholder="Enter email address" name="email">
+                    </div>
+                    <button ID="Button1" class="btn btn-primary form-control">Subscribe</button>
 
-                    <h4>Subscribe Us!</h4>
-                    <br />
-
-
-                        <div class="form-group">
-                            <input type="email" class="form-control mb-2" id="email" placeholder="Enter email address" name="email">
-                        </div>
-                        <Button ID="Button1" class="form-control submit bg-primary text-white px-3 " >Subscribe</button>
-                   
-
-
-                    <br />
-                    <br />
-                    <br />
-
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-skype"></a>
-                    <a href="#" class="fa fa-yahoo"></a>
-
-
-                </div>
-                <div class="row text-center">
-                    <p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        All rights reserved - CanWeHelp
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
                 </div>
             </div>
+            <div class="row text-center mt-4">
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved - CanWeHelp</p>
             </div>
+        </div>
     </footer>
-      
 </body>
 </html>

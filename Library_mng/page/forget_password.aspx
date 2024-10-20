@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="patientlogin.aspx.cs" Inherits="Library_mng.page.patientlogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="forget_password.aspx.cs" Inherits="Library_mng.page.forget_password" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +13,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Patient Login</title>
+    <title>Reset Password</title>
 
     <style>
         body {
@@ -22,36 +22,36 @@
             background-position: center;
             min-height: 100vh;
         }
-        .login-box {
+        .reset-box {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-top: 100px;
         }
-        .login-box h3 {
+        .reset-box h3 {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
             color: #343a40;
         }
-        .login-box label {
+        .reset-box label {
             font-weight: bold;
             font-size: 14px;
         }
-        .login-box .btn {
+        .reset-box .btn {
             width: 100%;
             padding: 10px;
             font-size: 16px;
         }
-        .login-box .links a {
+        .reset-box .links a {
             color: #007bff;
             text-decoration: none;
         }
-        .login-box .links a:hover {
+        .reset-box .links a:hover {
             text-decoration: underline;
         }
-        .login-box .form-text {
+        .reset-box .form-text {
             font-size: 12px;
             color: #6c757d;
         }
@@ -60,30 +60,35 @@
 <body>
     <form id="form1" runat="server">
         <div class="container d-flex justify-content-center align-items-center">
-            <div class="col-md-6 col-lg-4 login-box">
-                <h3 class="text-center text-primary">Patient Login</h3>
+            <div class="col-md-6 col-lg-4 reset-box">
+                <h3 class="text-center text-primary">Reset Password</h3>
 
-                <!-- Patient Login ID -->
+                <!-- Patient ID -->
                 <div class="mb-3">
-                    <label for="loginid" class="form-label">Patient Login ID <span class="text-danger">*</span></label>
-                    <asp:TextBox ID="loginid" runat="server" CssClass="form-control" onblur="return ValidateUid();"></asp:TextBox>
+                    <label for="PatientId" class="form-label">Patient ID <span class="text-danger">*</span></label>
+                    <asp:TextBox ID="PatientId" runat="server" CssClass="form-control" onblur="return ValidateUid();"></asp:TextBox>
                 </div>
 
-                <!-- Password -->
+                <!-- New Password -->
                 <div class="mb-3">
-                    <label for="passwordp" class="form-label">Password <span class="text-danger">*</span></label>
-                    <asp:TextBox ID="passwordp" runat="server" CssClass="form-control" TextMode="Password" onblur="return ValidatePWd();"></asp:TextBox>
+                    <label for="newpassword" class="form-label">New Password <span class="text-danger">*</span></label>
+                    <asp:TextBox ID="newpassword" runat="server" CssClass="form-control" TextMode="Password" onblur="return ValidatePWd();"></asp:TextBox>
                 </div>
 
-                <!-- Login Button -->
+                <!-- Confirm New Password -->
+                <div class="mb-3">
+                    <label for="ConfNewPassword" class="form-label">Confirm New Password <span class="text-danger">*</span></label>
+                    <asp:TextBox ID="ConfNewPassword" runat="server" CssClass="form-control" TextMode="Password" onblur="return ValidatePWd();"></asp:TextBox>
+                </div>
+
+                <!-- Reset Button -->
                 <div class="mb-3 text-center">
-                    <asp:Button ID="Loginbtnp" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="Loginbtnp_Click"></asp:Button>
+                    <asp:Button ID="forgetbtn" runat="server" Text="Reset Password" CssClass="btn btn-primary" OnClick="forgetbtn_Click"></asp:Button>
                 </div>
 
                 <!-- Additional Links -->
                 <div class="text-center links">
-                    <p><a href="forget_password.aspx">Forgot Password?</a></p>
-                    <p>Not a user? <a href="patientregistration.aspx">Sign Up</a></p>
+                    <p><a href="patientlogin.aspx">Back to Login</a></p>
                     <p><a href="default.aspx">Go to Home</a></p>
                 </div>
             </div>

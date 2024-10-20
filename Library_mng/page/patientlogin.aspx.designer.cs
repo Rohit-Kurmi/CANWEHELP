@@ -24,15 +24,6 @@ namespace Library_mng.page
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// plabel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label plabel1;
-
-        /// <summary>
         /// loginid control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace Library_mng.page
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox loginid;
-
-        /// <summary>
-        /// plabel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label plabel2;
 
         /// <summary>
         /// passwordp control.

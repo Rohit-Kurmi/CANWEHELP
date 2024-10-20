@@ -26,7 +26,7 @@
                     <div class="col-md-3  border border-muted pb-5 py-4">
                         <div class="form-group">
                             <span class="text-danger">*</span>
-                            <asp:TextBox ID="Txtname" class="form-control" placeholder="Hospital Name" runat="server" CssClass="tremove"></asp:TextBox>
+                            <asp:TextBox ID="Txtname" class="form-control" placeholder="Hospital Name" runat="server" ></asp:TextBox>
                         </div>
                     </div>
 
